@@ -1,0 +1,20 @@
+# Discord API with Voice Receive Support and DAVE E2EE protocol
+py-cord[voice] @ git+https://github.com/Pycord-Development/pycord.git@refs/pull/3159/head
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Voice encryption for Discord
+PyNaCl>=1.5.0
+
+# WebSocket client for Moshi server communication
+aiohttp>=3.9.0
+
+# Audio resampling (48kHz Discord <-> 24kHz PersonaPlex)
+torchaudio
+
+# Numerical operations for PCM audio processing
+numpy
+
+# Streaming wake word detection
+faster-whisper

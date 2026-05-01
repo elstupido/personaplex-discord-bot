@@ -1,0 +1,54 @@
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BASE_IMAGE: nvcr.io/nvidia/pytorch
+        BASE_IMAGE_TAG: 25.01-py3
+    image: ai-voice-bot:latest
+    container_name: ai-voice-bot
+
+    # Required for GPU + high-performance audio processing
+    ipc: host
+    ulimits:
+      memlock: -1
+      stack: 67108864
+
+    env_file:
+      - .env
+
+    environment:
+      # Enable host networking and all intents
+      - DISCORD_INTENTS=all
+      # Suppress PyTorch compilation on startup (saves ~30s per run)
+      - NO_TORCH_COMPILE=1
+      # Ensure model cache is used
+      - HF_HOME=/app/model_cache
+      - TORCH_HOME=/app/model_cache
+
+    volumes:
+      # Persist HuggingFace model weights & voice prompts across restarts
+      # First run downloads ~14GB; subsequent runs are instant
+      - ./model_cache:/app/model_cache
+      - ./src:/app/src
+      - ./supervisor.py:/app/supervisor.py
+      - ./tests:/app/tests
+      - ./voice_profiles:/app/voice_profiles
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+    # Restart on crash, but not on explicit docker-compose stop
+    restart: unless-stopped

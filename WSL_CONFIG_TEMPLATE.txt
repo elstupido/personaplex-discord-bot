@@ -1,0 +1,24 @@
+# Place this file at C:\Users\<YourUsername>\.wslconfig
+# Then run 'wsl --shutdown' in PowerShell to apply.
+
+[wsl2]
+# Allocation: 24GB is the "Sweet Spot" for 9B models on 32GB systems.
+# If you have 64GB+ RAM, change this to 32GB.
+memory=24GB
+
+# Assign 16 cores (or 24 if you have a high-end i9/R9)
+processors=16
+
+# Enable fast swap as a safety net for model sharding
+swap=8GB
+
+# IMPROVE NETWORK: Mirrored mode helps with Discord UDP voice stability
+networkingMode=mirrored
+
+# PERFORMANCE: Allow Windows to reclaim RAM when WSL isn't using it
+pageReporting=true
+
+# GPU: Ensure Blackwell sm_120 is visible and optimized
+[experimental]
+autoMemoryReclaim=gradual
+sparseVhd=true
