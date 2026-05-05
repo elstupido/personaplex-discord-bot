@@ -76,14 +76,14 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -q --no-cache-dir --no-deps /app/moshi/. && \
     pip install -q --no-cache-dir --prefer-binary --no-build-isolation \
     python-dotenv PyNaCl accelerate "bitsandbytes>=0.45.0" aiohttp \
-    matcha-tts setuptools faster-whisper
+    matcha-tts setuptools faster-whisper funasr modelscope
 RUN pip install --no-cache-dir --force-reinstall \
     "py-cord[voice] @ git+https://github.com/Pycord-Development/pycord.git@refs/pull/3159/head"
 
 # 8. PRE-DOWNLOAD DECODER WEIGHTS (High-Speed HF Transfer)
 RUN HF_HUB_ENABLE_HF_TRANSFER=1 huggingface-cli download THUDM/glm-4-voice-decoder --local-dir /app/glm/glm-4-voice-decoder
 
-COPY supervisor.py /app/supervisor.py
+COPY scripts/supervisor.py /app/supervisor.py
 COPY src/ /app/src/
 
 RUN mkdir -p /app/ssl
@@ -92,4 +92,5 @@ ENV TORCH_HOME=/app/model_cache
 
 EXPOSE 8998
 EXPOSE 10000
-CMD ["python", "supervisor.py"]
+ENTRYPOINT ["python", "supervisor.py"]
+CMD []

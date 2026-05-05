@@ -1,4 +1,48 @@
 services:
+  # --- THE BRAIN: vLLM-Omni Neural Inference Engine ---
+  # WHY: Dedicated isolation for heavy neural kernels. 
+  # This container owns the GPU and the VRAM budget.
+  vllm-omni:
+    image: vllm/vllm-openai:latest # Using standard vLLM as the base for Omni-serving
+    container_name: vllm-brain
+    
+    # WHY IPC HOST? To allow zero-copy shared memory transfer with the body.
+    # This is the "Acoustic Bridge" that protects the 20ms frame budget.
+    ipc: host
+    shm_size: '4gb' # Generous pool for high-resolution audio tensors
+    
+    ports:
+      - "8000:8000"
+    
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - HF_HOME=/app/model_cache
+      - VLLM_LOGGING_LEVEL=DEBUG
+    
+    volumes:
+      - ./model_cache:/app/model_cache
+    
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+              
+    # Command to boot the Omni-modality stage graph
+    command: >
+      --model fishaudio/s2-pro
+      --trust-remote-code
+      --enforce-eager
+      --gpu-memory-utilization 0.85
+      --max-model-len 4096
+    
+    restart: unless-stopped
+
+  # --- THE BODY: PersonaPlex Discord Orchestrator ---
+  # WHY: Lightweight, responsive bot logic. 
+  # This container owns the "Physics" (RTP, Jitter, Audio Events).
   bot:
     build:
       context: .
@@ -7,41 +51,72 @@ services:
         BASE_IMAGE: nvcr.io/nvidia/pytorch
         BASE_IMAGE_TAG: 25.01-py3
     image: ai-voice-bot:latest
-    container_name: ai-voice-bot
-
-    # Required for GPU + high-performance audio processing
+    container_name: ai-voice-body
+    
+    # WHY IPC HOST? To receive the neural stream from the brain without the "TCP Tax".
     ipc: host
+    
     ulimits:
       memlock: -1
       stack: 67108864
-
+      
+    depends_on:
+      - vllm-omni
+      
+    ports:
+      - "10000:10000"
+      
     env_file:
       - .env
-
+      
     environment:
-      # Enable host networking and all intents
       - DISCORD_INTENTS=all
-      # Suppress PyTorch compilation on startup (saves ~30s per run)
       - NO_TORCH_COMPILE=1
-      # Ensure model cache is used
-      - HF_HOME=/app/model_cache
-      - TORCH_HOME=/app/model_cache
-
+      - VLLM_SERVER_URL=http://vllm-omni:8000/v1
+      - STUPID_DIAGNOSTICS=1 # Enable the "Acoustic Trust" monitoring
+      
     volumes:
-      # Persist HuggingFace model weights & voice prompts across restarts
-      # First run downloads ~14GB; subsequent runs are instant
       - ./model_cache:/app/model_cache
       - ./src:/app/src
-      - ./supervisor.py:/app/supervisor.py
+      - ./scripts:/app/scripts
+      - ./scripts/supervisor.py:/app/supervisor.py
       - ./tests:/app/tests
       - ./voice_profiles:/app/voice_profiles
-
+      
     logging:
       driver: "json-file"
       options:
         max-size: "50m"
         max-file: "3"
+        
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu] # Still need GPU for local DSP (Resampling/VAD)
+              
+    restart: unless-stopped
 
+  # --- THE CITADEL: Automated Testing Suite ---
+  test:
+    image: ai-voice-bot:latest
+    container_name: ai-voice-citadel
+    profiles: ["test"]
+    command: ["--run_tests"]
+    ipc: host
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    env_file:
+      - .env
+    volumes:
+      - ./model_cache:/app/model_cache
+      - ./src:/app/src
+      - ./scripts:/app/scripts
+      - ./scripts/supervisor.py:/app/supervisor.py
+      - ./tests:/app/tests
     deploy:
       resources:
         reservations:
@@ -49,6 +124,3 @@ services:
             - driver: nvidia
               count: 1
               capabilities: [gpu]
-
-    # Restart on crash, but not on explicit docker-compose stop
-    restart: unless-stopped

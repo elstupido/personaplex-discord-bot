@@ -16,5 +16,8 @@ torchaudio
 # Numerical operations for PCM audio processing
 numpy
 
-# Streaming wake word detection
-faster-whisper
+# High-performance SenseVoice ASR (Fish Audio)
+funasr
+modelscope
+# Remote API communication
+requests
