@@ -43,7 +43,7 @@ RUN pip install --no-cache-dir \
     descript-audio-codec==0.0.7 \
     librosa \
     soundfile \
-    "fish-speech @ git+https://github.com/fishaudio/fish-speech.git@0695054"
+    "fish-speech @ git+https://github.com/fishaudio/fish-speech.git"
 
 # 5. Final Blueprint Mapping
 COPY qwen2_5_omni_5090.yaml /app/stage_config.yaml
