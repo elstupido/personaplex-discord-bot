@@ -33,6 +33,10 @@ class StreamState:
     current_drift: float = 0.0
     max_latency: float = 0.0
     
+    # Early-Emit Buffer
+    delta_buffer: List[bytes] = field(default_factory=list)
+    last_delta_emit_ts: float = 0.0
+    
     # Instrumentation
     jitter_filled_pkts: int = 0
     inactivity_filled_pkts: int = 0
@@ -207,7 +211,7 @@ class AudioEngine(multiprocessing.Process):
                 return
                 
             # We log exactly what packet caused this reactivation
-            logger.warning(
+            logger.info(
                 f"[Engine] [STREAM_REACTIVATE] Audio detected! user={uid} | "
                 f"ssrc={ssrc} | pkts_in_q={self.input_queue.qsize()} | "
                 f"rms={rms:.4f}"
@@ -282,7 +286,22 @@ class AudioEngine(multiprocessing.Process):
         stream.last_rx_now = now
         stream.active = True
         
-        # 9. Emit STREAM_CHUNK for real-time wake word detection
+        # 9. Early-Emit (Acoustic Deltas)
+        # WHY: vLLM-Omni can start ASR/Thinker stages before the turn is finalized.
+        # We emit a STREAM_DELTA every 200ms (10 frames) to the Orchestrator.
+        stream.delta_buffer.append(pcm)
+        if len(stream.delta_buffer) >= 10:
+            delta_audio = b"".join(stream.delta_buffer)
+            self.output_queue.put({
+                'event_type': 'STREAM_DELTA',
+                'user_id': orig_uid,
+                'audio': delta_audio,
+                'ts': time.time()
+            })
+            stream.delta_buffer = []
+            stream.last_delta_emit_ts = now
+
+        # 10. Emit STREAM_CHUNK for legacy wake word detection
         self.output_queue.put({
             'event_type': 'STREAM_CHUNK',
             'user_id': orig_uid,
@@ -308,7 +327,7 @@ class AudioEngine(multiprocessing.Process):
             dynamic_threshold = self.SILENCE_THRESHOLD + safety_buffer + stream.current_drift + bot_lag
 
             # if sink_silence > 1.0:
-            #      logger.debug(
+            #      logger.info(
             #          f"[Engine] [SILENCE_WATCH] user={uid} | sink_silence={sink_silence:.4f} | "
             #          f"dynamic_threshold={dynamic_threshold:.2f} | max_lat={stream.max_latency:.3f}"
             #      )
@@ -316,7 +335,7 @@ class AudioEngine(multiprocessing.Process):
             # 3. Finalization logic
             # Agreement between wall-clock (sink) and internal processing (engine)
             if sink_silence > dynamic_threshold and engine_silence > 0.5:
-                logger.debug(
+                logger.info(
                     f"[Engine] [FINAL_TRIGGER] user={uid} | sink={sink_silence:.4f} | "
                     f"threshold={dynamic_threshold:.2f} | now_wall={now:.4f}"
                 )
@@ -391,7 +410,7 @@ class AudioEngine(multiprocessing.Process):
                 'mixed_mode': self.GLOBAL_MIXING
             }
         })
-        logger.debug(f"[Engine] [FINALIZE_SENT] user={uid}")
+        logger.info(f"[Engine] [FINALIZE_SENT] user={uid} | dur={duration:.2f}s")
 
 def spawn_engine(input_queue: multiprocessing.Queue, output_queue: multiprocessing.Queue):
     stop_event = multiprocessing.Event()

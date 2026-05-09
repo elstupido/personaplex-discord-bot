@@ -20,6 +20,8 @@ services:
       - PYTHONUNBUFFERED=1
       - CUDA_LAUNCH_BLOCKING=1
       - VLLM_DEVICE_CAP_OVERRIDE=9.0
+      - HF_TOKEN=${HF_TOKEN}
+      - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}
     volumes:
       - ./model_cache:/app/model_cache
       - ./brain_entrypoint.sh:/app/brain_entrypoint.sh
@@ -28,9 +30,9 @@ services:
         condition: service_healthy
     entrypoint: /app/brain_entrypoint.sh
     command: >
-      --port 8000  --host 0.0.0.0  --model fishaudio/s2-pro --trust-remote-code  --gpu-memory-utilization 0.75  --max-model-len 2048  --enforce-eager  --omni
+      --port 8000  --host 0.0.0.0  --model fishaudio/s2-pro --trust-remote-code  --gpu-memory-utilization 0.75  --max-model-len 2048 --enforce-eager --omni
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      test: [ "CMD-SHELL", "curl -f http://localhost:8000/health || exit 1" ]
       interval: 10s
       timeout: 5s
       retries: 30
@@ -63,7 +65,7 @@ services:
       - ./ears_entrypoint.sh:/app/ears_entrypoint.sh
     entrypoint: /app/ears_entrypoint.sh
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8765/health || exit 1"]
+      test: [ "CMD-SHELL", "curl -f http://localhost:8765/health || exit 1" ]
       interval: 10s
       timeout: 5s
       retries: 5

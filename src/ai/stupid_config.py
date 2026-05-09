@@ -38,7 +38,7 @@ class StupidConfig:
 
     @classmethod
     def model_type(cls) -> str:
-        return os.getenv("MODEL_TYPE", "glm-4").lower()
+        return os.getenv("MODEL_TYPE", "Qwen/Qwen2.5-Omni-7B-Instruct").lower()
     
     @classmethod
     def vocoder_type(cls) -> str:
@@ -57,7 +57,7 @@ class StupidConfig:
         "moshi": StupidBlueprint(
             name="Moshi Real-time",
             steps=["resampler", "moshi"],
-            description="Ultra-low latency unified model."
+            description="--model Qwen/Qwen2.5-Omni-7B-Instruct --port 8000 --host 0.0.0.0 --trust-remote-code --gpu-memory-utilization 0.85 --max-model-len 4096 --enforce-eager"
         ),
         "mini-omni": StupidBlueprint(
             name="Mini-Omni2 Experimental",
@@ -66,8 +66,13 @@ class StupidConfig:
         ),
         "vllm-omni": StupidBlueprint(
             name="vLLM-Omni Disaggregated",
-            steps=["resampler", "vllm-omni"],
-            description="High-performance stage-graph serving via vLLM-brain."
+            steps=["downsampler", "vllm-omni", "upsampler"],
+            description="High-performance stage-graph serving via vLLM-brain. Upsampler converts 24kHz→48kHz stereo for Discord."
+        ),
+        "qwen-fish": StupidBlueprint(
+            name="Sacred Fish Hybrid",
+            steps=["downsampler", "vllm-omni-asr", "cpu_reasoning", "vllm-omni-tts", "upsampler"],
+            description="ASR (SenseVoice GPU) -> Think (Qwen CPU) -> Talk (Fish 19GB GPU) -> Upsample (Discord)."
         ),
         "diagnostics": StupidBlueprint(
             name="Maintenance Mode",
@@ -79,13 +84,17 @@ class StupidConfig:
     # --- THE EXPERT MAP ---
     EXPERT_MODULES = {
         "diagnostics": "ai.audit.diagnostics",
+        "resampler": "ai.transform.resampler",
         "downsampler": "ai.transform.resampler",
         "upsampler": "ai.transform.resampler",
         "whisper_tokenizer": "ai.transform.tokenizer",
         "glm-4": "ai.transform.glm",
         "moshi": "ai.transform.moshi",
         "mini-omni": "ai.transform.mini_omni",
-        "vllm-omni": "ai.transform.vllm_omni"
+        "vllm-omni": "ai.transform.vllm_omni",
+        "vllm-omni-asr": "ai.transform.vllm_omni_asr",
+        "vllm-omni-tts": "ai.transform.vllm_omni_tts",
+        "cpu_reasoning": "ai.transform.cpu_reasoning"
     }
 
     @classmethod

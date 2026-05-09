@@ -62,12 +62,12 @@ class VoiceServiceCog(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         """Warm up models immediately."""
-        if not self.bridge: return
-        
         if os.getenv("LAZY_LOAD_MODELS", "true").lower() == "true":
             logger.info("💤 [VoiceService] Lazy Mode: Skipping eager warmup.")
         else:
             logger.info("🔥 [VoiceService] Eager Mode: Igniting kernels...")
+            # WHY: Initializing the bridge here ensures models are loaded into RAM/VRAM 
+            # while the bot is sitting idle, rather than waiting for the first user to join.
             asyncio.create_task(self._ensure_bridge())
 
     async def _warmup_all(self):
@@ -88,12 +88,12 @@ class VoiceServiceCog(commands.Cog):
 
     # --- UI Commands ---
 
-    @slash_command(name="ping", description="Check bot status.")
+    @slash_command(name="ping", description="Check bot status.", guild_ids=[int(os.getenv("GUILD_ID", 0))] if os.getenv("GUILD_ID") else None)
     async def ping(self, ctx: discord.ApplicationContext):
         ms = round(self.bot.latency * 1000)
         await ctx.respond(f"✅ Online. Latency: {ms}ms")
 
-    @slash_command(name="join", description="Join a voice channel.")
+    @slash_command(name="join", description="Join a voice channel.", guild_ids=[int(os.getenv("GUILD_ID", 0))] if os.getenv("GUILD_ID") else None)
     async def join(self, ctx: discord.ApplicationContext, channel: discord.VoiceChannel = None):
         if not channel:
             if not ctx.author.voice:
@@ -122,7 +122,7 @@ class VoiceServiceCog(commands.Cog):
             logger.error(f"💥 Join failed: {e}", exc_info=True)
             await ctx.followup.send(f"🛑 Connection Terminated: {e}")
 
-    @slash_command(name="leave", description="Leave voice.")
+    @slash_command(name="leave", description="Leave voice.", guild_ids=[int(os.getenv("GUILD_ID", 0))] if os.getenv("GUILD_ID") else None)
     async def leave(self, ctx: discord.ApplicationContext):
         if not self.active_session:
             return await ctx.respond("Not in a session.", ephemeral=True)
@@ -130,6 +130,21 @@ class VoiceServiceCog(commands.Cog):
             await ctx.defer()
         await self._teardown_session()
         await ctx.followup.send("🖕 Session ended.")
+
+    @slash_command(name="say", description="Make the bot speak text.", guild_ids=[int(os.getenv("GUILD_ID", 0))] if os.getenv("GUILD_ID") else None)
+    async def say(self, ctx: discord.ApplicationContext, text: Option(str, "What should I say?")):
+        """Manual TTS Trigger."""
+        if not self.active_session:
+            return await ctx.respond("❌ I'm not in a voice channel! Use `/join` first.", ephemeral=True)
+        
+        await ctx.defer()
+        try:
+            logger.info(f"🗣️ [VoiceService] User {ctx.author} requested /say: {text}")
+            await self.bridge.speak(text)
+            await ctx.followup.send(f"🗣️ **Said**: {text}")
+        except Exception as e:
+            logger.error(f"💥 [VoiceService] /say failed: {e}")
+            await ctx.followup.send(f"⚠️ **Failed to speak**: {e}")
 
     # --- RPG Character Management ---
 
@@ -201,7 +216,8 @@ class VoiceServiceCog(commands.Cog):
             try:
                 task = s[key].close() if key == 'bridge' else s[key].stop() if key == 'orchestrator' else s[key].disconnect()
                 await task
-            except Exception: pass
+            except Exception as e:
+                logger.error(f"[VoiceService] Teardown error for {key}: {e}")
 
 def setup(bot: discord.Bot):
     bot.add_cog(VoiceServiceCog(bot))

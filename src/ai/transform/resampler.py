@@ -13,6 +13,7 @@ from typing import Generator, AsyncGenerator
 from ..stupid_base import StupidStep, StupidData, StupidRegistry, logger
 from ..components import AudioResampler
 
+@StupidRegistry.register("resampler")
 @StupidRegistry.register("downsampler")
 class DownsamplerExpert(StupidStep):
     """

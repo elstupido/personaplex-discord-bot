@@ -84,7 +84,9 @@ class PersonaPlexBot(discord.Bot):
 
     async def _eager_warmup(self):
         """Primes the inference server's neural kernels."""
-        url = "http://localhost:10000/warmup"
+        base_url = os.getenv("VLLM_SERVER_URL", "http://localhost:8000/v1")
+        # WHY: Construct /warmup from the base VLLM URL
+        url = base_url.replace("/v1", "") + "/warmup"
         logger.info(f"🛰️  Triggering Eager Warmup at {url}...")
         try:
             async with aiohttp.ClientSession() as session:

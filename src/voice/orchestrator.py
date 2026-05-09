@@ -55,11 +55,6 @@ class AudioOrchestrator:
         clone_word = os.getenv("CLONE_WORD", "clone my voice")
         self.trigger_engine = TriggerEngine(wake_word, clone_word)
         self.trigger_engine.on_trigger = self._on_trigger
-        
-        # Default to SenseVoice if we have a server URL (Fallback to localhost:10000)
-        server_url = os.getenv("GLM_SERVER_URL", "http://127.0.0.1:10000")
-        backend = "sensevoice" if server_url else "whisper"
-        self.trigger_engine.set_backend(backend)
 
     def _on_trigger(self, trigger_type: str, text: str):
         """Callback fired by TriggerEngine when a wake/clone word is detected."""
@@ -197,10 +192,10 @@ class AudioOrchestrator:
                     duration = payload.get('duration_s', 0)
                     
                     if duration < 0.5:
-                        logger.debug(f"[Orchestrator] Ignoring micro-turn ({duration:.2f}s).")
+                        logger.info(f"[Orchestrator] Ignoring micro-turn ({duration:.2f}s).")
                         continue
                         
-                    logger.debug(f"[Orchestrator] [DISPATCH] Handing {duration:.2f}s turn to Bridge for {username}")
+                    logger.info(f"[Orchestrator] [DISPATCH] Handing {duration:.2f}s turn to Bridge for {username}")
                     payload['is_clone_reference'] = self.is_cloning
                     
                     self.is_awake = False
@@ -208,7 +203,7 @@ class AudioOrchestrator:
                     
                     asyncio.run_coroutine_threadsafe(self.bridge.send_audio_packet(payload), self.loop)
                 else:
-                    logger.debug(f"[Orchestrator] [IDLE] Dropping {payload.get('duration_s', 0):.2f}s turn from {username}")
+                    logger.info(f"[Orchestrator] [IDLE] Dropping {payload.get('duration_s', 0):.2f}s turn from {username}")
                 
             except Exception as e:
                 logger.error(f"[Orchestrator] Listener error: {e}")

@@ -1,11 +1,11 @@
 """
 WHY THIS FILE EXISTS:
-Voice encoder for /cloneme: saves Discord PCM as a WAV file in the voices directory.
+Voice encoder for voice cloning: saves Discord PCM as a WAV file.
 
 WHY DO WE JUST SAVE A WAV?
-The Moshi server's load_voice_prompt() handles encoding internally when given a .wav file.
-We do NOT try to replicate the .pt embedding format in the bot—let the server do it correctly
-where the full LM architecture is loaded.
+The neural brain (Qwen-Omni/Fish-Speech) handles the complex acoustic embeddings.
+By saving a high-fidelity WAV, we maintain the maximum information for the
+cloning expert to process when requested.
 """
 import asyncio
 import logging
@@ -18,28 +18,8 @@ import torchaudio
 logger = logging.getLogger("voice.encoder")
 
 DISCORD_SR = 48000
-HF_REPO = "nvidia/personaplex-7b-v1"
 
-_VOICE_PROMPTS_DIR_CACHE: str | None = None
-
-
-def _get_voice_prompts_dir() -> str:
-    """
-    Resolve the voices directory in the PersonaPlex model cache.
-    Uses huggingface_hub — avoids importing moshi.server which calls main() at module level.
-    """
-    global _VOICE_PROMPTS_DIR_CACHE
-    if _VOICE_PROMPTS_DIR_CACHE is None:
-        from huggingface_hub import snapshot_download
-        hf_home = os.getenv("HF_HOME", os.path.expanduser("~/.cache/huggingface"))
-        snapshot_path = snapshot_download(
-            repo_id=HF_REPO,
-            cache_dir=os.path.join(hf_home, "hub"),
-            local_files_only=True,
-        )
-        _VOICE_PROMPTS_DIR_CACHE = os.path.join(snapshot_path, "voices")
-        logger.info(f"Voice prompts dir resolved: {_VOICE_PROMPTS_DIR_CACHE}")
-    return _VOICE_PROMPTS_DIR_CACHE
+VOICES_DIR = "src/assets/voices"
 
 
 def _encode_blocking(pcm_bytes: bytes, output_path: str) -> None:

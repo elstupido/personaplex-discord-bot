@@ -47,14 +47,18 @@ async def create_bridge(voice_preset: str, text_prompt: str, audio_source=None, 
     logger.info(f"🚀 Instantiating bridge for model: {model_type} ({blueprint.name})")
     
     # 2. Try the New StupidRunner path first 🌊
+    # WHY: If the model has a blueprint OR a registered expert, we use the 
+    # new Recursive ETL runner via the Adapter.
+    is_blueprint = model_type in StupidConfig.BLUEPRINTS
     try:
-        # Check if the primary model expert is registered
-        StupidRegistry.get_expert(model_type)
-        logger.info(f"✅ [Factory] Found Expert in Registry: {model_type}. Using StupidBridgeAdapter.")
+        is_expert = StupidRegistry.get_expert(model_type) is not None
+    except:
+        is_expert = False
+
+    if is_blueprint or is_expert:
+        logger.info(f"✅ [Factory] Using StupidBridgeAdapter for '{model_type}'.")
         from .bridge_adapter import StupidBridgeAdapter
         return StupidBridgeAdapter(model_type)
-    except (ValueError, KeyError):
-        logger.warning(f"⚠️ [Factory] Expert '{model_type}' not found in Registry. Falling back to legacy bridge.")
 
     # 3. Legacy Fallbacks (Deprecated) 🏛️
     if model_type == "moshi":
@@ -64,10 +68,7 @@ async def create_bridge(voice_preset: str, text_prompt: str, audio_source=None, 
         except ImportError as e:
             logger.error(f"💥 Failed to load Moshi dependencies: {e}")
             raise
-    elif model_type == "glm-4":
-        from .providers.glm.core import GLMBridge
-        return GLMBridge(voice_preset, text_prompt, audio_source, vocoder=vocoder)
     else:
-        logger.warning(f"⚠️ Unknown MODEL_TYPE '{model_type}'. Defaulting to GLM-4 legacy.")
+        logger.warning(f"⚠️ Unknown or legacy MODEL_TYPE '{model_type}'. Defaulting to GLM-4 legacy.")
         from .providers.glm.core import GLMBridge
         return GLMBridge(voice_preset, text_prompt, audio_source, vocoder=vocoder)

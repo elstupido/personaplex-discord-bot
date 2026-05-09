@@ -143,13 +143,12 @@ if __name__ == "__main__":
         "Validates event loop responsiveness during heavy expert loading."
     )
     
-    # 5. Unit Tests (Legacy/Component layer)
-    # citadel.run_test(
-    #     "Component Units",
-    #     "python3 tests/test_audio_pipeline.py",
-    #     "Validates resamplers, tokenizers, and decoders in isolation."
-    # )
+    citadel.run_test("Neural Integrity", f"{sys.executable} tests/verify_brain_health.py", 
+                     "Validates connectivity to the disaggregated vLLM-Omni brain.")
     
+    citadel.run_test("E2E Voice Interaction", f"{sys.executable} tests/verify_e2e_voice.py", 
+                     "Simulates a full voice turn and captures the brain's acoustic response.")
+
     citadel.print_report()
     
     # Exit with code 1 if any tests failed

@@ -4,8 +4,8 @@
 WHY THIS FILE EXISTS:
 This document serves as the high-level technical architectural blueprint 
 for the StupidBot system. It defines the 'Recursive Stupid ETL' heart, 
-the VRAM management strategy, and the 'Stupid Functional Expert System' 
-DAG execution model.
+the Disaggregated 'Brain-Body' split, and the 'Stupid Functional Expert' 
+Stage-Graph execution model.
 
 ---
 
@@ -24,19 +24,21 @@ Standard ETL (Extract, Transform, Load) is linear. Real-time interaction is **Cy
 
 ---
 
-## II. The Disaggregated Expert System (vLLM-Omni)
+## II. The Disaggregated Brain-Body Split (vLLM-Omni)
 
 **WHY DISAGGREGATED?**
-The industry trend is toward "Monolithic Models." We move in the opposite direction, now formalized by **vLLM-Omni**.
-- **WHY?** Because a single model that does everything is slow and VRAM-heavy. By using vLLM-Omni's disaggregated graph, we separate the **Thinker** (LLM), **Talker** (Audio Gen), and **Vocoder** into independent engines.
-  1. **Streaming Overlap**: The Vocoder starts generating waveform as soon as the Talker produces the first token. We don't wait; we **Flow**.
-  2. **Shared Memory Connectors**: vLLM-Omni provides the "Zero-Copy" performance for inter-stage tensor movement that our custom Python bridges could only dream of.
-  3. **Stage-Level Batching**: Each part of the brain batches at its own speed, ensuring the RTX 5090 is always fed.
+Because the RTX 5090 is a beast that deserves a dedicated cage. Running heavy neural kernels (LLM/TTS) in the same process as the Discord event loop is an invitation for jitter.
+- **The Body (Orchestrator)**: Lives in the `ai-voice-body` container. Handles Discord signaling, RTP processing, and the "Stupid ETL" river. It is optimized for 50Hz latency and loop stability.
+- **The Brain (Inference Engine)**: Lives in the `vllm-brain` container. Runs the specialized `vLLM-Omni` fork. It is optimized for VRAM throughput and parallel stage execution.
 
-### 1. The vLLM-Omni Sigil Integration
-- `$parallelize`: **WHY?** Because vLLM-Omni handles concurrent stage execution natively. ASR and VAD feed the graph in parallel streams.
-- `$stream_overlap`: **WHY?** (Replaces `$speculate`). Because "Time to First Token" is everything. vLLM-Omni overlaps the Thinker and Talker stages to shave hundreds of milliseconds off the response.
-- `$crystallize`: **WHY?** To reduce the multi-stream state of the disaggregated engines into a single, high-fidelity turn finalization.
+### 1. The Acoustic Bridge (IPC Zero-Copy)
+- **WHY THE BRIDGE?** To cross the container boundary without the "TCP Tax." We use `ipc: host` to allow the Body to read the Brain's tensor output via shared memory, protecting the 20ms frame budget.
+- **WHY vLLM-OMNI?** It formalizes the "Stage-Graph" where **Thinker** (LLM), **Talker** (Audio Gen), and **Vocoder** run in parallel. The Vocoder starts generating waveform before the LLM has even finished its sentence.
+
+### 2. The vLLM-Omni Sigils
+- `$parallelize`: **WHY?** Native stage concurrency. ASR and VAD feed the graph in parallel streams.
+- `$stream_overlap`: **WHY?** (Replaces `$speculate`). The Thinker and Talker stages overlap to shave hundreds of milliseconds off TTFT (Time to First Token).
+- `$crystallize`: **WHY?** Reducing the multi-stream state of the disaggregated engines into a single, high-fidelity turn finalization.
 
 ---
 
@@ -53,19 +55,14 @@ Because fixed buffers are either too slow (lag) or too brittle (packet loss). Th
 
 ---
 
-## IV. The Dual-Container Split (The Physics of Isolation)
+## IV. VRAM Discipline & Resource Sovereignty
 
-**WHY TWO CONTAINERS?**
-We split the brain from the body.
-1. **The Bot (The Body)**: Handles Discord signaling, RTP/Jitter buffering, and the high-level `Stupid ETL` logic. It is optimized for **Clock-Speed** and event-loop responsiveness.
-2. **vLLM-Omni (The Brain)**: A dedicated, CUDA-optimized environment for the model graph. It is optimized for **VRAM Throughput** and tensor operations.
-
-**WHY IPC SHARED MEMORY?**
-Standard Docker networking (TCP) is a "Serialization Tax" we refuse to pay. By using `--ipc=host` or a shared memory volume, we allow the **Brain** to pass 48kHz audio tensors to the **Body** with **Zero-Copy** overhead. This ensures the 20ms frame is protected across the container boundary.
+**WHY VRAM DISCIPLINE?**
+Because the RTX 5090's 32GB (or 24GB) is a finite boundary. In the disaggregated model, the **Brain** container owns the VRAM.
+- **Lazy Allocation**: vLLM-Omni is configured with `--gpu-memory-utilization 0.85` to leave headroom for the host and the Body's local DSP (Digital Signal Processing).
+- **Stage Isolation**: By running the Brain in its own container, we prevent "VRAM Creep" from the Python event loop from interfering with the neural kernels.
 
 ---
-
-## V. VRAM Discipline & Resource Sovereignty
 
 ## Final Snark for the Successor (Read This, Claude!)
 

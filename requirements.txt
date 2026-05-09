@@ -19,5 +19,20 @@ numpy
 # High-performance SenseVoice ASR (Fish Audio)
 funasr
 modelscope
+
+# Voice Activity Detection (The First Gate)
+# WHY: Prevents the 5090 from burning cycles on silence.
+silero-vad
+
+# Neural Keyword Spotting (The Ear)
+# WHY: Sherpa-ONNX Zipformer provides temporally-aware phoneme spotting.
+sherpa-onnx>=1.13.0
+sentencepiece
+
+# AI Training & Optimization (The Muscle)
+# WHY: Required for BitsAndBytes and model loading optimizations.
+accelerate
+bitsandbytes>=0.45.0
+
 # Remote API communication
 requests

@@ -15,6 +15,7 @@ from .stupid_runner import StupidRunner
 from .stupid_config import StupidConfig
 from .providers.glm.assets import load_asset_pcm
 import os
+import numpy as np
 
 class StupidBridgeAdapter:
     """
@@ -86,6 +87,7 @@ class StupidBridgeAdapter:
         
         # 2. Build the Atomic Particle ⚛️
         ctx = AcousticContext(user_id=user_id)
+        ctx.metadata['is_partial'] = payload.get('is_partial', False)
         data = StupidData(content=audio, context=ctx, type="pcm")
         
         # 3. Define the Blueprint Job 📜
@@ -95,12 +97,59 @@ class StupidBridgeAdapter:
             data=data
         )
         
-        logger.debug(f"🚀 [StupidBridge] Dispatching job for user {user_id}...")
+        logger.info(f"🚀 [StupidBridge] Dispatching {len(audio)} bytes for user {user_id} via '{self.blueprint.name}'")
         
         # 4. Run the Job ⚡
-        # Note: In a real bot, we'd handle the results (audio/text) here 
-        # to feed the discord audio source.
-        results = await self.runner.execute_job(job)
+        # WHY: We iterate through the stream of results (PCM particles) 
+        # and feed them directly into the Discord source for playback.
+        async for result in self.runner.execute_job_stream(job):
+            if result.type == "pcm" and self.audio_source:
+                # Ensure it's bytes (experts might return numpy/tensors)
+                content = result.content
+                if not isinstance(content, bytes):
+                    if isinstance(content, (list, np.ndarray)):
+                        content = np.array(content, dtype=np.int16).tobytes()
+                
+                self.audio_source.feed(content)
         
-        logger.debug(f"🌊 [StupidBridge] Job complete. Produced {len(results)} output particles.")
-        # TODO: Feed results to AudioSource (Phase 3)
+        logger.info(f"🌊 [StupidBridge] Job complete for user {user_id}.")
+
+    async def speak(self, text: str):
+        """
+        The 'Mouth-Only' Gateway. 👄
+        
+        WHY: 
+        For /say commands, we bypass the ears (ASR) and the brain (LLM) 
+        and go straight to the vocal cords (TTS). We use the exact same 
+        expert chain that Reasoning uses to ensure vocal consistency.
+        """
+        if not self.is_running: 
+            logger.warning("⚠️ [StupidBridge] Speak requested but adapter is not running.")
+            return
+
+        # 1. Build the Text Particle ⚛️
+        # WHY: We use a 'manual' user_id to distinguish this from AI-generated turn logic.
+        ctx = AcousticContext(user_id="manual_tts")
+        data = StupidData(content=text, context=ctx, type="text")
+        
+        # 2. Define the 'Mouth' Job 📜
+        # WHY: vllm-omni-tts (The Fish Mouth) -> upsampler (48kHz for Discord).
+        steps = ["vllm-omni-tts", "upsampler"]
+        job = StupidJob(steps=steps, data=data)
+        
+        logger.info(f"👄 [StupidBridge] Manual TTS dispatch: \"{text[:50]}...\"")
+        
+        # 3. Execute and Stream to Discord 🔈
+        try:
+            async for result in self.runner.execute_job_stream(job):
+                if result.type == "pcm" and self.audio_source:
+                    content = result.content
+                    if not isinstance(content, bytes):
+                        import numpy as np
+                        if isinstance(content, (list, np.ndarray)):
+                            content = np.array(content, dtype=np.int16).tobytes()
+                    
+                    self.audio_source.feed(content)
+            logger.info("✅ [StupidBridge] Manual TTS playback complete.")
+        except Exception as e:
+            logger.error(f"💥 [StupidBridge] Manual TTS failed: {e}", exc_info=True)

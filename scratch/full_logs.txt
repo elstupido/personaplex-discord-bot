@@ -1,0 +1,1000 @@
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244540559 (RTP) | now=1778188647.6205 | diff=0.0433[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244541519 (RTP) | now=1778188647.6205 | diff=0.0429[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244542479 (RTP) | now=1778188647.6205 | diff=0.0425[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244543439 (RTP) | now=1778188647.6205 | diff=0.0422[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244544399 (RTP) | now=1778188647.6205 | diff=0.0419[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244545359 (RTP) | now=1778188647.6205 | diff=0.0417[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🛡️ [VAD] Speech Probability: 0.791[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🗣️  [VAD] Speech detected! Opening acoustic gate...[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244546319 (RTP) | now=1778188647.7428 | diff=0.0632[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244547279 (RTP) | now=1778188647.7428 | diff=0.0627[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244548239 (RTP) | now=1778188647.7428 | diff=0.0624[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244549199 (RTP) | now=1778188647.7428 | diff=0.0620[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244550159 (RTP) | now=1778188647.7428 | diff=0.0617[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244551119 (RTP) | now=1778188647.8358 | diff=0.0533[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244552079 (RTP) | now=1778188647.8358 | diff=0.0529[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244553039 (RTP) | now=1778188647.8358 | diff=0.0525[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244553999 (RTP) | now=1778188647.8358 | diff=0.0522[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244554959 (RTP) | now=1778188647.8358 | diff=0.0515[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244555919 (RTP) | now=1778188647.9398 | diff=0.0576[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244556879 (RTP) | now=1778188647.9398 | diff=0.0574[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244557839 (RTP) | now=1778188647.9398 | diff=0.0574[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244558799 (RTP) | now=1778188647.9398 | diff=0.0573[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244559759 (RTP) | now=1778188647.9398 | diff=0.0571[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244560719 (RTP) | now=1778188647.9398 | diff=0.0524[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:27[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:27[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244561679 (RTP) | now=1778188648.0391 | diff=0.0498[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244562639 (RTP) | now=1778188648.0391 | diff=0.0484[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244563599 (RTP) | now=1778188648.0391 | diff=0.0483[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244564559 (RTP) | now=1778188648.0391 | diff=0.0475[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244565519 (RTP) | now=1778188648.1406 | diff=0.0457[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244566479 (RTP) | now=1778188648.1406 | diff=0.0451[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244567439 (RTP) | now=1778188648.1406 | diff=0.0417[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244568399 (RTP) | now=1778188648.1406 | diff=0.0411[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244569359 (RTP) | now=1778188648.1406 | diff=0.0367[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244570319 (RTP) | now=1778188648.1406 | diff=0.0337[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244571279 (RTP) | now=1778188648.1406 | diff=0.0336[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244572239 (RTP) | now=1778188648.2621 | diff=0.0573[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244573199 (RTP) | now=1778188648.2621 | diff=0.0568[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244574159 (RTP) | now=1778188648.2621 | diff=0.0565[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244575119 (RTP) | now=1778188648.2621 | diff=0.0562[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244576079 (RTP) | now=1778188648.4289 | diff=0.1220[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244577039 (RTP) | now=1778188648.4289 | diff=0.1210[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244577999 (RTP) | now=1778188648.4289 | diff=0.1206[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244578959 (RTP) | now=1778188648.4289 | diff=0.1204[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event member_speaking_stop[0m
+[96m21:17:28[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:28[0m | [93mWARNING [0m | [94mvoice.orches...[0m | [93m[LoopMonitor] Event loop blocked for 0.1178s[0m
+[96m21:17:29[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:29[0m | [93mWARNING [0m | [94mpy.warnings    [0m | [93m/usr/local/lib/python3.12/dist-packages/onnxruntime/capi/onnxruntime_inference_collection.py:69: UserWarning: Specified provider 'CUDAExecutionProvider' is not in available provider names.Available providers: 'AzureExecutionProvider, CPUExecutionProvider'
+  warnings.warn(
+[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mdiscord.gateway[0m | [36mKeeping shard ID None voice websocket alive with timestamp {'t': 1778188649310, 'seq_ack': 7}.[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 3, 'd': {'t': 1778188649310, 'seq_ack': 7}}.[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mReceived text payload: {"op":6,"d":{"t":1778188649310}}[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mVoice websocket frame received: {'op': 6, 'd': {'t': 1778188649310}}[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FINAL_TRIGGER] user=global | sink=1.0162 | threshold=0.98 | now_wall=1778188649.3247[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FINALIZE_START] user=global | buffer_size=51[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FINALIZE_STATS] user=global | dur=1.02s | total=51 | real=51 | jitter=0[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FINALIZE_SENT] user=global[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m[Orchestrator] [IDLE] Dropping 1.02s turn from User global[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m📁 [FishTemplate] Scanning directory: src/assets/positives (Files: 3)[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🧪 [FishTemplate] Fingerprinting neutral_hey_stupid_0.wav (14 samples)...[0m
+[96m21:17:29[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m🧬 [FishTemplate] Fingerprinted: neutral_hey_stupid_0.wav (SR: 24000)[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🧪 [FishTemplate] Fingerprinting hey_stupid_final.wav (15185 samples)...[0m
+[96m21:17:29[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m🧬 [FishTemplate] Fingerprinted: hey_stupid_final.wav (SR: 41000)[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🧪 [FishTemplate] Fingerprinting hey_stupid_0.wav (13120 samples)...[0m
+[96m21:17:29[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m🧬 [FishTemplate] Fingerprinted: hey_stupid_0.wav (SR: 24000)[0m
+[96m21:17:29[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m🧬 [FishTemplate] Loaded 3 acoustic templates.[0m
+[96m21:17:29[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m✨ [TRIGGER] 'HEY_STUPID' detected![0m
+[96m21:17:29[0m | [92mINFO    [0m | [94mvoice.orches...[0m | [92m✨ [Orchestrator] TRIGGER FIRED: wake (Matched: 'hey_stupid')[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FLUSH] Dropping current audio buffers.[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mvoice.source   [0m | [36m[AudioSource] Resumed — SpeakingState.voice[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mvoice.source   [0m | [36m[AudioSource] [PLAY_START] Buffer size: 55[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 5, 'd': {'speaking': 1, 'delay': 0}}.[0m
+[96m21:17:29[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m💓 [TriggerEngine] Heartbeat: Processed 3 chunks. ReadPtr: 16320[0m
+[96m21:17:30[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:30[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:30[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:30[0m | [36mDEBUG   [0m | [94mvoice.source   [0m | [36m[AudioSource] Paused — SpeakingState.none[0m
+[96m21:17:30[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 5, 'd': {'speaking': 0, 'delay': 0}}.[0m
+[96m21:17:31[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:31[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:31[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:32[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event member_speaking_start[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244579919 (RTP) | now=1778188652.4168 | diff=0.0546[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244772879 (RTP) | now=1778188652.4168 | diff=0.0535[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244773839 (RTP) | now=1778188652.4168 | diff=0.0531[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244774799 (RTP) | now=1778188652.4168 | diff=0.0526[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244775759 (RTP) | now=1778188652.5155 | diff=0.0817[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244776719 (RTP) | now=1778188652.5155 | diff=0.0810[0m
+[96m21:17:32[0m | [93mWARNING [0m | [94mEngine         [0m | [93m[Engine] [STREAM_REACTIVATE] Audio detected! user=global | ssrc=251 | pkts_in_q=0 | rms=0.0433[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244777679 (RTP) | now=1778188652.5155 | diff=0.0806[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244778639 (RTP) | now=1778188652.5155 | diff=0.0499[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244779599 (RTP) | now=1778188652.5155 | diff=0.0493[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🛡️ [VAD] Speech Probability: 0.970[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🗣️  [VAD] Speech detected! Opening acoustic gate...[0m
+[96m21:17:32[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m✨ [TRIGGER] 'HEY_STUPID' detected![0m
+[96m21:17:32[0m | [92mINFO    [0m | [94mvoice.orches...[0m | [92m✨ [Orchestrator] TRIGGER FIRED: wake (Matched: 'hey_stupid')[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FLUSH] Dropping current audio buffers.[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.source   [0m | [36m[AudioSource] Resumed — SpeakingState.voice[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.source   [0m | [36m[AudioSource] [PLAY_START] Buffer size: 55[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 5, 'd': {'speaking': 1, 'delay': 0}}.[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244780559 (RTP) | now=1778188652.6123 | diff=0.0799[0m
+[96m21:17:32[0m | [93mWARNING [0m | [94mEngine         [0m | [93m[Engine] [STREAM_REACTIVATE] Audio detected! user=global | ssrc=251 | pkts_in_q=0 | rms=0.1773[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244781519 (RTP) | now=1778188652.6123 | diff=0.0795[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244782479 (RTP) | now=1778188652.6123 | diff=0.0786[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244783439 (RTP) | now=1778188652.6123 | diff=0.0448[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244784399 (RTP) | now=1778188652.6123 | diff=0.0437[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244785359 (RTP) | now=1778188652.7092 | diff=0.0928[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244786319 (RTP) | now=1778188652.7092 | diff=0.0921[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244787279 (RTP) | now=1778188652.7092 | diff=0.0402[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244788239 (RTP) | now=1778188652.7092 | diff=0.0396[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244789199 (RTP) | now=1778188652.7092 | diff=0.0393[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244790159 (RTP) | now=1778188652.8094 | diff=0.0383[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244791119 (RTP) | now=1778188652.8094 | diff=0.0376[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244792079 (RTP) | now=1778188652.8094 | diff=0.0366[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244793039 (RTP) | now=1778188652.8094 | diff=0.0354[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244793999 (RTP) | now=1778188652.8094 | diff=0.0347[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244794959 (RTP) | now=1778188652.9103 | diff=0.0985[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244795919 (RTP) | now=1778188652.9103 | diff=0.0980[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244796879 (RTP) | now=1778188652.9103 | diff=0.0338[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244797839 (RTP) | now=1778188652.9103 | diff=0.0325[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244798799 (RTP) | now=1778188652.9103 | diff=0.0322[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244799759 (RTP) | now=1778188652.9103 | diff=0.0320[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:32[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244800719 (RTP) | now=1778188653.0110 | diff=0.0738[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244801679 (RTP) | now=1778188653.0110 | diff=0.0725[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244802639 (RTP) | now=1778188653.0110 | diff=0.0315[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244803599 (RTP) | now=1778188653.0110 | diff=0.0301[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🛡️ [VAD] Speech Probability: 1.000[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🗣️  [VAD] Speech detected! Opening acoustic gate...[0m
+[96m21:17:33[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m✨ [TRIGGER] 'HEY_STUPID' detected![0m
+[96m21:17:33[0m | [92mINFO    [0m | [94mvoice.orches...[0m | [92m✨ [Orchestrator] TRIGGER FIRED: wake (Matched: 'hey_stupid')[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FLUSH] Dropping current audio buffers.[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244804559 (RTP) | now=1778188653.1109 | diff=0.0950[0m
+[96m21:17:33[0m | [93mWARNING [0m | [94mEngine         [0m | [93m[Engine] [STREAM_REACTIVATE] Audio detected! user=global | ssrc=251 | pkts_in_q=0 | rms=0.0957[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244805519 (RTP) | now=1778188653.1109 | diff=0.0943[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244806479 (RTP) | now=1778188653.1109 | diff=0.0754[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244807439 (RTP) | now=1778188653.1109 | diff=0.0289[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244808399 (RTP) | now=1778188653.1109 | diff=0.0274[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244809359 (RTP) | now=1778188653.1109 | diff=0.0270[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244810319 (RTP) | now=1778188653.2112 | diff=0.0264[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244811279 (RTP) | now=1778188653.2112 | diff=0.0258[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244812239 (RTP) | now=1778188653.2112 | diff=0.0251[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244813199 (RTP) | now=1778188653.2112 | diff=0.0244[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244814159 (RTP) | now=1778188653.2112 | diff=0.0239[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244815119 (RTP) | now=1778188653.3114 | diff=0.0986[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244816079 (RTP) | now=1778188653.3114 | diff=0.0227[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244817039 (RTP) | now=1778188653.3114 | diff=0.0223[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244817999 (RTP) | now=1778188653.3114 | diff=0.0220[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244818959 (RTP) | now=1778188653.3114 | diff=0.0216[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244819919 (RTP) | now=1778188653.4116 | diff=0.0210[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244820879 (RTP) | now=1778188653.4116 | diff=0.0209[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244821839 (RTP) | now=1778188653.4116 | diff=0.0207[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244822799 (RTP) | now=1778188653.4116 | diff=0.0200[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244823759 (RTP) | now=1778188653.4116 | diff=0.0199[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244824719 (RTP) | now=1778188653.4116 | diff=0.0198[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244825679 (RTP) | now=1778188653.5118 | diff=0.0732[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244826639 (RTP) | now=1778188653.5118 | diff=0.0728[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244827599 (RTP) | now=1778188653.5118 | diff=0.0192[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244828559 (RTP) | now=1778188653.5118 | diff=0.0189[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🛡️ [VAD] Speech Probability: 1.000[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🗣️  [VAD] Speech detected! Opening acoustic gate...[0m
+[96m21:17:33[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m✨ [TRIGGER] 'HEY_STUPID' detected![0m
+[96m21:17:33[0m | [92mINFO    [0m | [94mvoice.orches...[0m | [92m✨ [Orchestrator] TRIGGER FIRED: wake (Matched: 'hey_stupid')[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FLUSH] Dropping current audio buffers.[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244829519 (RTP) | now=1778188653.6120 | diff=0.0742[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244830479 (RTP) | now=1778188653.6120 | diff=0.0737[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244831439 (RTP) | now=1778188653.6120 | diff=0.0176[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244832399 (RTP) | now=1778188653.6120 | diff=0.0172[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244833359 (RTP) | now=1778188653.6120 | diff=0.0169[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244834319 (RTP) | now=1778188653.7122 | diff=0.0166[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event member_speaking_stop[0m
+[96m21:17:33[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:33[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:34[0m | [36mDEBUG   [0m | [94mdiscord.gateway[0m | [36mKeeping shard ID None voice websocket alive with timestamp {'t': 1778188654310, 'seq_ack': 7}.[0m
+[96m21:17:34[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 3, 'd': {'t': 1778188654310, 'seq_ack': 7}}.[0m
+[96m21:17:34[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mReceived text payload: {"op":6,"d":{"t":1778188654310}}[0m
+[96m21:17:34[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mVoice websocket frame received: {'op': 6, 'd': {'t': 1778188654310}}[0m
+[96m21:17:34[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:34[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m💓 [TriggerEngine] Heartbeat: Processed 3 chunks. ReadPtr: 1920[0m
+[96m21:17:34[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:35[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:35[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:35[0m | [36mDEBUG   [0m | [94mvoice.source   [0m | [36m[AudioSource] Paused — SpeakingState.none[0m
+[96m21:17:35[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 5, 'd': {'speaking': 0, 'delay': 0}}.[0m
+[96m21:17:36[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:36[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:36[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:37[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:37[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:37[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:38[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:38[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:38[0m | [36mDEBUG   [0m | [94mdiscord.gateway[0m | [36mKeeping shard ID None websocket alive with sequence 19.[0m
+[96m21:17:38[0m | [36mDEBUG   [0m | [94mdiscord.gateway[0m | [36mFor Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}[0m
+[96m21:17:38[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:39[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:39[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:39[0m | [36mDEBUG   [0m | [94mdiscord.gateway[0m | [36mKeeping shard ID None voice websocket alive with timestamp {'t': 1778188659311, 'seq_ack': 7}.[0m
+[96m21:17:39[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 3, 'd': {'t': 1778188659311, 'seq_ack': 7}}.[0m
+[96m21:17:39[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mReceived text payload: {"op":6,"d":{"t":1778188659311}}[0m
+[96m21:17:39[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mVoice websocket frame received: {'op': 6, 'd': {'t': 1778188659311}}[0m
+[96m21:17:39[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:39[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m💓 [TriggerEngine] Heartbeat: Processed 0 chunks. ReadPtr: 1920[0m
+[96m21:17:40[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:40[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:40[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:41[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:41[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:41[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:42[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event member_speaking_start[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=244835279 (RTP) | now=1778188662.4978 | diff=0.0403[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245259599 (RTP) | now=1778188662.5818 | diff=0.0502[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245260559 (RTP) | now=1778188662.5818 | diff=0.0501[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245261519 (RTP) | now=1778188662.5818 | diff=0.0499[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245262479 (RTP) | now=1778188662.5818 | diff=0.0490[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245263439 (RTP) | now=1778188662.6823 | diff=0.0482[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245264399 (RTP) | now=1778188662.6823 | diff=0.0472[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245265359 (RTP) | now=1778188662.6823 | diff=0.0463[0m
+[96m21:17:42[0m | [93mWARNING [0m | [94mEngine         [0m | [93m[Engine] [STREAM_REACTIVATE] Audio detected! user=global | ssrc=251 | pkts_in_q=0 | rms=0.0069[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245266319 (RTP) | now=1778188662.6823 | diff=0.0454[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245267279 (RTP) | now=1778188662.6823 | diff=0.0443[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245268239 (RTP) | now=1778188662.7824 | diff=0.0422[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245269199 (RTP) | now=1778188662.7824 | diff=0.0403[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245270159 (RTP) | now=1778188662.7824 | diff=0.0393[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245271119 (RTP) | now=1778188662.7824 | diff=0.0383[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245272079 (RTP) | now=1778188662.7824 | diff=0.0374[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245273039 (RTP) | now=1778188662.7824 | diff=0.0367[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🛡️ [VAD] Speech Probability: 0.809[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🗣️  [VAD] Speech detected! Opening acoustic gate...[0m
+[96m21:17:42[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m✨ [TRIGGER] 'HEY_STUPID' detected![0m
+[96m21:17:42[0m | [92mINFO    [0m | [94mvoice.orches...[0m | [92m✨ [Orchestrator] TRIGGER FIRED: wake (Matched: 'hey_stupid')[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FLUSH] Dropping current audio buffers.[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.source   [0m | [36m[AudioSource] Resumed — SpeakingState.voice[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.source   [0m | [36m[AudioSource] [PLAY_START] Buffer size: 55[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 5, 'd': {'speaking': 1, 'delay': 0}}.[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245273999 (RTP) | now=1778188662.8825 | diff=0.0981[0m
+[96m21:17:42[0m | [93mWARNING [0m | [94mEngine         [0m | [93m[Engine] [STREAM_REACTIVATE] Audio detected! user=global | ssrc=251 | pkts_in_q=0 | rms=0.0203[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245274959 (RTP) | now=1778188662.8825 | diff=0.0963[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245275919 (RTP) | now=1778188662.8825 | diff=0.0349[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245276879 (RTP) | now=1778188662.8825 | diff=0.0338[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245277839 (RTP) | now=1778188662.8825 | diff=0.0331[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245278799 (RTP) | now=1778188662.9828 | diff=0.0986[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245279759 (RTP) | now=1778188662.9828 | diff=0.0982[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245280719 (RTP) | now=1778188662.9828 | diff=0.0321[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245281679 (RTP) | now=1778188662.9828 | diff=0.0313[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245282639 (RTP) | now=1778188662.9828 | diff=0.0308[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:42[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245283599 (RTP) | now=1778188663.0830 | diff=0.0277[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245284559 (RTP) | now=1778188663.0830 | diff=0.0271[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245285519 (RTP) | now=1778188663.0830 | diff=0.0263[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245286479 (RTP) | now=1778188663.0830 | diff=0.0261[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245287439 (RTP) | now=1778188663.0830 | diff=0.0258[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245288399 (RTP) | now=1778188663.1832 | diff=0.0977[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245289359 (RTP) | now=1778188663.1832 | diff=0.0967[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245290319 (RTP) | now=1778188663.1832 | diff=0.0224[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245291279 (RTP) | now=1778188663.1832 | diff=0.0221[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245292239 (RTP) | now=1778188663.1832 | diff=0.0217[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245293199 (RTP) | now=1778188663.1832 | diff=0.0204[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245294159 (RTP) | now=1778188663.2836 | diff=0.0204[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245295119 (RTP) | now=1778188663.2836 | diff=0.0199[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245296079 (RTP) | now=1778188663.2836 | diff=0.0194[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245297039 (RTP) | now=1778188663.2836 | diff=0.0189[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245297999 (RTP) | now=1778188663.2836 | diff=0.0185[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🛡️ [VAD] Speech Probability: 0.974[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🗣️  [VAD] Speech detected! Opening acoustic gate...[0m
+[96m21:17:43[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m✨ [TRIGGER] 'HEY_STUPID' detected![0m
+[96m21:17:43[0m | [92mINFO    [0m | [94mvoice.orches...[0m | [92m✨ [Orchestrator] TRIGGER FIRED: wake (Matched: 'hey_stupid')[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FLUSH] Dropping current audio buffers.[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245298959 (RTP) | now=1778188663.3838 | diff=0.0973[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245299919 (RTP) | now=1778188663.3838 | diff=0.0159[0m
+[96m21:17:43[0m | [93mWARNING [0m | [94mEngine         [0m | [93m[Engine] [STREAM_REACTIVATE] Audio detected! user=global | ssrc=251 | pkts_in_q=0 | rms=0.0159[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245300879 (RTP) | now=1778188663.3838 | diff=0.0152[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245301839 (RTP) | now=1778188663.3838 | diff=0.0142[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245302799 (RTP) | now=1778188663.3838 | diff=0.0136[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245303759 (RTP) | now=1778188663.4839 | diff=0.0254[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245304719 (RTP) | now=1778188663.4839 | diff=0.0249[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245305679 (RTP) | now=1778188663.4839 | diff=0.0245[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245306639 (RTP) | now=1778188663.4839 | diff=0.0243[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245307599 (RTP) | now=1778188663.4839 | diff=0.0239[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245308559 (RTP) | now=1778188663.5842 | diff=0.0984[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245309519 (RTP) | now=1778188663.5842 | diff=0.0125[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245310479 (RTP) | now=1778188663.5842 | diff=0.0119[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245311439 (RTP) | now=1778188663.5842 | diff=0.0109[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245312399 (RTP) | now=1778188663.5842 | diff=0.0108[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245313359 (RTP) | now=1778188663.5842 | diff=0.0108[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245314319 (RTP) | now=1778188663.6844 | diff=0.0104[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245315279 (RTP) | now=1778188663.6844 | diff=0.0092[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245316239 (RTP) | now=1778188663.6844 | diff=0.0091[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245317199 (RTP) | now=1778188663.6844 | diff=0.0089[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245318159 (RTP) | now=1778188663.6844 | diff=0.0088[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245319119 (RTP) | now=1778188663.7846 | diff=0.0084[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245320079 (RTP) | now=1778188663.7846 | diff=0.0080[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245321039 (RTP) | now=1778188663.7846 | diff=0.0074[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245321999 (RTP) | now=1778188663.7846 | diff=0.0069[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🛡️ [VAD] Speech Probability: 0.938[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🗣️  [VAD] Speech detected! Opening acoustic gate...[0m
+[96m21:17:43[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m✨ [TRIGGER] 'HEY_STUPID' detected![0m
+[96m21:17:43[0m | [92mINFO    [0m | [94mvoice.orches...[0m | [92m✨ [Orchestrator] TRIGGER FIRED: wake (Matched: 'hey_stupid')[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FLUSH] Dropping current audio buffers.[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245322959 (RTP) | now=1778188663.8849 | diff=0.0822[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245323919 (RTP) | now=1778188663.8849 | diff=0.0817[0m
+[96m21:17:43[0m | [93mWARNING [0m | [94mEngine         [0m | [93m[Engine] [STREAM_REACTIVATE] Audio detected! user=global | ssrc=251 | pkts_in_q=0 | rms=0.0088[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245324879 (RTP) | now=1778188663.8849 | diff=0.0054[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245325839 (RTP) | now=1778188663.8849 | diff=0.0040[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245326799 (RTP) | now=1778188663.8849 | diff=0.0032[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245327759 (RTP) | now=1778188663.8849 | diff=0.0025[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245328719 (RTP) | now=1778188663.9851 | diff=0.0218[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245329679 (RTP) | now=1778188663.9851 | diff=0.0208[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245330639 (RTP) | now=1778188663.9851 | diff=0.0200[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245331599 (RTP) | now=1778188663.9851 | diff=0.0190[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245332559 (RTP) | now=1778188663.9851 | diff=0.0019[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:43[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245333519 (RTP) | now=1778188664.0860 | diff=0.0016[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245334479 (RTP) | now=1778188664.1855 | diff=0.0997[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245335439 (RTP) | now=1778188664.1855 | diff=0.0996[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245336399 (RTP) | now=1778188664.1855 | diff=0.0995[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245337359 (RTP) | now=1778188664.1855 | diff=0.0994[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245338319 (RTP) | now=1778188664.1855 | diff=0.0993[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🚀 [StupidBridge] Dispatching job for user 241375217610391553...[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mai.stupid_base [0m | [36m🌊 [StupidBridge] Job complete for user 241375217610391553.[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245339279 (RTP) | now=1778188664.2859 | diff=0.0991[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245340239 (RTP) | now=1778188664.2859 | diff=0.0979[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245341199 (RTP) | now=1778188664.2859 | diff=0.0974[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245342159 (RTP) | now=1778188664.2859 | diff=0.0966[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.orches...[0m | [36m📥 [Orchestrator] Feed Chunk: 3840 bytes[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDecrypting RTP AEAD XChaCha20 Poly1305 RTPSize, has decrypted data?: False[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mFeeding packet to packet router[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🛡️ [VAD] Speech Probability: 0.875[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m🗣️  [VAD] Speech detected! Opening acoustic gate...[0m
+[96m21:17:44[0m | [92mINFO    [0m | [94mvoice.trigger  [0m | [92m✨ [TRIGGER] 'HEY_STUPID' detected![0m
+[96m21:17:44[0m | [92mINFO    [0m | [94mvoice.orches...[0m | [92m✨ [Orchestrator] TRIGGER FIRED: wake (Matched: 'hey_stupid')[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.gateway[0m | [36mKeeping shard ID None voice websocket alive with timestamp {'t': 1778188664311, 'seq_ack': 7}.[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 3, 'd': {'t': 1778188664311, 'seq_ack': 7}}.[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mReceived text payload: {"op":6,"d":{"t":1778188664311}}[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mVoice websocket frame received: {'op': 6, 'd': {'t': 1778188664311}}[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [FLUSH] Dropping current audio buffers.[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245343119 (RTP) | now=1778188664.3861 | diff=0.0954[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245344079 (RTP) | now=1778188664.3861 | diff=0.0953[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mEngine         [0m | [36m[Engine] [PROC] user=global | ssrc=251 | ts=245345039 (RTP) | now=1778188664.3861 | diff=0.0951[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event member_speaking_stop[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mvoice.trigger  [0m | [36m💓 [TriggerEngine] Heartbeat: Processed 4 chunks. ReadPtr: 27200[0m
+[96m21:17:44[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:44[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:45[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:45[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mReceived unexpected rtcp packet type=200, <class 'discord.voice.packets.rtp.SenderReportPacket'>[0m
+[96m21:17:45[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mDispatch voice event rtcp_packet[0m
+[96m21:17:46[0m | [92mINFO    [0m | [94mdiscord.client [0m | [92mCleaning up tasks.[0m
+[96m21:17:46[0m | [92mINFO    [0m | [94mdiscord.client [0m | [92mCleaning up after 4 tasks.[0m
+[96m21:17:46[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mUnregistering a socket listener callback <bound method AudioReader.callback of <discord.voice.receive.reader.AudioReader object at 0x700899d77650>>[0m
+[96m21:17:46[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mReader is not active[0m
+[96m21:17:46[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mAttempting a voice disconnect for channel 1500255591774294129 (guild 931747939662057472)[0m
+[96m21:17:46[0m | [92mINFO    [0m | [94mdiscord.voic...[0m | [92mTerminating voice handshake for channel 1500255591774294129 (guild 931747939662057472)[0m
+[96m21:17:46[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mState changed from connected to disconnected[0m
+[96m21:17:46[0m | [36mDEBUG   [0m | [94mdiscord.gateway[0m | [36mUpdating our voice state to {'op': 4, 'd': {'guild_id': 931747939662057472, 'channel_id': None, 'self_mute': False, 'self_deaf': False}}.[0m
+[96m21:17:46[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mIgnoring exception while disconnecting from voice[0m
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/discord/client.py", line 856, in runner
+    await self.start(*args, **kwargs)
+  File "/usr/local/lib/python3.12/dist-packages/discord/client.py", line 820, in start
+    await self.connect(reconnect=reconnect)
+  File "/usr/local/lib/python3.12/dist-packages/discord/client.py", line 712, in connect
+    await self.ws.poll_event()
+  File "/usr/local/lib/python3.12/dist-packages/discord/gateway.py", line 631, in poll_event
+    msg = await self.socket.receive(timeout=self._max_heartbeat_timeout)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/aiohttp/client_ws.py", line 334, in receive
+    msg = await self._reader.read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_websocket/reader_c.py", line 118, in read
+  File "aiohttp/_websocket/reader_c.py", line 115, in aiohttp._websocket.reader_c.WebSocketDataQueue.read
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/discord/voice/state.py", line 572, in disconnect
+    await self._voice_disconnect()
+  File "/usr/local/lib/python3.12/dist-packages/discord/voice/state.py", line 729, in _voice_disconnect
+    await self.guild.change_voice_state(
+  File "/usr/local/lib/python3.12/dist-packages/discord/guild.py", line 4066, in change_voice_state
+    await ws.voice_state(self.id, channel_id, self_mute, self_deaf)
+  File "/usr/local/lib/python3.12/dist-packages/discord/gateway.py", line 764, in voice_state
+    await self.send_as_json(payload)
+  File "/usr/local/lib/python3.12/dist-packages/discord/gateway.py", line 676, in send_as_json
+    await self.send(utils._to_json(data))
+  File "/usr/local/lib/python3.12/dist-packages/discord/gateway.py", line 672, in send
+    await self.socket.send_str(data)
+  File "/usr/local/lib/python3.12/dist-packages/aiohttp/client_ws.py", line 245, in send_str
+    await self._writer.send_frame(
+  File "/usr/local/lib/python3.12/dist-packages/aiohttp/_websocket/writer.py", line 83, in send_frame
+    self._write_websocket_frame(message, opcode, 0)
+  File "/usr/local/lib/python3.12/dist-packages/aiohttp/_websocket/writer.py", line 151, in _write_websocket_frame
+    raise ClientConnectionResetError("Cannot write to closing transport")
+aiohttp.client_exceptions.ClientConnectionResetError: Cannot write to closing transport
+[96m21:17:46[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mSending voice websocket frame: {'op': 5, 'd': {'speaking': 0, 'delay': 0}}.[0m
+[96m21:17:46[0m | [36mDEBUG   [0m | [94mdiscord.voic...[0m | [36mError reading from socket in <SocketEventReader(voice-socket-event-reader:0x70089a06bd70, initial daemon 123180702234304)>, this should be safe to ignore[0m
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/dist-packages/discord/voice/state.py", line 181, in _do_run
+    data = self.state.socket.recv(self.buffer_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 9] Bad file descriptor

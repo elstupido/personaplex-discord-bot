@@ -33,13 +33,24 @@ os.environ["PYTHONWARNINGS"] = "ignore:NVIDIA GeForce RTX 5090 with CUDA capabil
 def wait_for_server(host="127.0.0.1", port=10000, timeout=600, label="server"):
     """Poll until the server is accepting TCP connections."""
     start = time.time()
+    print(f"[supervisor] ⏳ Waiting for {label} at {host}:{port}...")
     while time.time() - start < timeout:
         try:
             with socket.create_connection((host, port), timeout=2):
+                print(f"[supervisor] ✅ {label} is accepting connections.")
                 return True
         except (ConnectionRefusedError, OSError):
             time.sleep(2)
     return False
+
+def check_brain_integrity():
+    """Run the dedicated brain health check script."""
+    print("[supervisor] 🧠 Verifying Brain Integrity...")
+    health_script = "tests/verify_brain_health.py"
+    if os.path.exists(health_script):
+        res = subprocess.run([sys.executable, health_script])
+        return res.returncode == 0
+    return True # Skip if script missing (fallback)
 
 
 def main():
@@ -78,8 +89,8 @@ def main():
         port = 10000
     elif model_type == "vllm-omni":
         # WHY: In the disaggregated architecture, the Brain lives in a separate container.
-        # We don't spawn a local process; we just wait for the 'vllm-brain' host.
-        server_host = os.getenv("VLLM_SERVER_HOST", "vllm-brain")
+        # We don't spawn a local process; we just wait for the 'vllm-omni' host.
+        server_host = os.getenv("VLLM_SERVER_HOST", "vllm-omni")
         port = 8000
         server_cmd = None
     else:
@@ -103,7 +114,14 @@ def main():
     host = "127.0.0.1" if server_cmd else server_host
     
     if not wait_for_server(host=host, port=port, timeout=600, label=model_type.upper()):
-        print(f"[supervisor] ERROR: {model_type.upper()} brain at {host}:{port} did not become ready!")
+        print(f"[supervisor] 💥 ERROR: {model_type.upper()} brain at {host}:{port} did not become ready!")
+        if moshi_proc:
+            moshi_proc.terminate()
+        sys.exit(1)
+
+    # 4. Neural Integrity Check
+    if not check_brain_integrity():
+        print("[supervisor] 💥 ERROR: Brain Integrity Check FAILED! Neural kernels are compromised.")
         if moshi_proc:
             moshi_proc.terminate()
         sys.exit(1)
@@ -112,6 +130,7 @@ def main():
         [sys.executable, "src/core/bot.py"],
         stdout=sys.stdout,
         stderr=sys.stderr,
+        env=env,
     )
 
     # Graceful shutdown handler

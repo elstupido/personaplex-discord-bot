@@ -4,8 +4,8 @@
 WHY THIS FILE EXISTS:
 This manifesto codifies the 'Stupid' philosophy and the 'Laws of Acoustic Physics' 
 that govern the project. It serves as a Gating Protocol to ensure that all 
-contributions (especially from AI models) favor local-first, zero-copy, 
-and high-performance execution over cloud-based over-engineering.
+contributions favor disaggregated, zero-copy, and high-performance 
+execution via the 'Brain-Body' split.
 
 ---
 
@@ -23,12 +23,12 @@ and high-performance execution over cloud-based over-engineering.
 **WHY THIS PHILOSOPHY?**
 Because the "Monolithic Bridge" model is a dead end. In a real-time voice system, data isn't a static payload; it's a **River**. If you build a bridge, you create a bottleneck. If you build an **Orchestrated River**, you create a system that can recurse, branch, and evolve without ever stalling the conveyor belt.
 
-1. **Audio is a River**: We treat voice as a continuous flow. The "Conveyor Belt" must never stop, because the human on the other side doesn't have a "Pause" button for their ears.
-2. **Atomic Particles**: All work is reduced to **Extract**, **Transform**, and **Load**. This functional purity allows us to swap "Experts" (models) like lego bricks.
-3. **Stupidly Simple Core**: By making the core "Stupid" about AI but "Genius" about Physics (Jitter, Drift, VAD), we ensure the high-level logic stays clean and the low-level timing stays precise.
-4. **Functional Expert Systems**: We don't "Talk to a Model"; we chain "Experts." This allows for parallel execution (ASR + Sentiment + Diagnostics) instead of a slow, serial "Think-Then-Speak" loop.
-5. **No Magic Strings**: Everything is explicit and declarative. If it's not in the `StupidRegistry`, it's "Magic," and magic is just code you're too lazy to define.
-6. **The Flight Recorder**: Every packet carries a **StupidTrace**. We don't "guess" why the bot stuttered; we read the journal.
+1. **Audio is a River**: We treat voice as a continuous flow. The "Conveyor Belt" must never stop.
+2. **Atomic Particles**: All work is reduced to **Extract**, **Transform**, and **Load**.
+3. **Brain-Body Isolation**: We separate neural heavy-lifting (Brain) from signaling physics (Body). This isolation protects the 50Hz heartbeat from neural-kernel stalls.
+4. **The Acoustic Bridge**: We connect containers via **IPC Shared Memory**. Networking is for humans; pointers are for speed.
+5. **Stage-Graph Concurrency**: We don't "wait" for the LLM to finish. We overlap Thinker, Talker, and Vocoder stages to achieve sub-100ms TTFT.
+6. **No Magic Strings**: Everything is explicit and declarative in the `StupidRegistry`.
 
 ---
 
@@ -37,10 +37,11 @@ Because the "Monolithic Bridge" model is a dead end. In a real-time voice system
 **WHY THESE LAWS?**
 Because humans are evolved to detect 10ms of latency in a conversation. Real-time audio is a physics problem first and an AI problem second.
 
-1. **The 20ms Hop**: Discord operates on 20ms audio frames. If your logic takes 21ms, you have broken the 50Hz conveyor belt. You have failed the human.
-2. **The 50Hz Loop**: Our conveyor belt must tick at exactly 50Hz. Any blocking call in the main loop is an architectural crime that will be punished by jitter. (user intejects) AND ME. I will smite you.
-3. **The Jitter Floor**: Networks are garbage. The **Accordion Buffer** is our physical shock absorber—it stretches to absorb model bursts and contracts to maintain "presence."
-4. **Spectral Integrity**: Never resample in Python. Use the GPU. Your CPU is for logic; the Silicon is for Tensors. THE GIL IS YOUR ENEMY.
+1. **The 20ms Hop**: Discord operates on 20ms audio frames. If your logic takes 21ms, you have broken the 50Hz conveyor belt.
+2. **The 50Hz Loop**: Our conveyor belt must tick at exactly 50Hz.
+3. **The Jitter Floor**: Networks are garbage. The **Accordion Buffer** is our physical shock absorber.
+4. **Spectral Integrity**: Never resample in Python. Use the GPU.
+5. **Disaggregated Sovereignty**: The Brain and Body must communicate via **Zero-Copy IPC**. If you use JSON over HTTP for raw tensors, you have failed.
 
 ---
 

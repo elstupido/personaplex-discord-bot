@@ -13,7 +13,7 @@ import asyncio
 import torch
 import time
 import os
-from typing import List, Any, Generator, Dict
+from typing import List, Any, Generator, Dict, AsyncGenerator
 from core.logger import setup_logger
 from .stupid_base import StupidData, StupidStep, StupidJob, StupidRegistry
 
@@ -103,6 +103,59 @@ class StupidRunner:
                         else:
                             await asyncio.to_thread(instance.warmup)
 
+    async def execute_job_stream(self, job: StupidJob) -> AsyncGenerator[StupidData, None]:
+        """
+        Execute a StupidJob and yield results as they reach the end of the river. 🌊
+        
+        WHY STREAMING?
+        For voice interaction, waiting for the whole response to finish before 
+        playing the first syllable is unacceptable. This allows 'First Syllable 
+        Latency' to be independent of 'Total Response Length'.
+        """
+        current_data = [job.data]
+        
+        # We iterate through the steps. For all but the last step, we 
+        # collect all particles. For the LAST step, we yield them.
+        for i, step_id in enumerate(job.steps):
+            is_last_step = (i == len(job.steps) - 1)
+            
+            if isinstance(step_id, StupidJob):
+                # Recurse (Streaming recursion is complex, so we buffer for now)
+                # TODO: Implement full recursive streaming
+                results = await self.execute_job(step_id)
+                current_data = results
+                if is_last_step:
+                    for r in results: yield r
+                continue
+            
+            if step_id.startswith("$"):
+                await self._handle_sigil(step_id, job)
+                continue
+
+            next_data = []
+            expert_cls = StupidRegistry.get_expert(step_id)
+            
+            if step_id not in self.active_experts:
+                await self.vram_guard.monitor(self.active_experts)
+                instance = await asyncio.to_thread(expert_cls, step_id)
+                self.active_experts[step_id] = {'instance': instance, 'last_used': time.time()}
+            
+            expert = self.active_experts[step_id]['instance']
+            self.active_experts[step_id]['last_used'] = time.time()
+            
+            for d in current_data:
+                try:
+                    async for result in expert.process(d):
+                        if is_last_step:
+                            yield result
+                        else:
+                            next_data.append(result)
+                except Exception as e:
+                    logger.error(f"☢️ [StupidRunner] Expert Meltdown in '{step_id}': {e}", exc_info=True)
+                    continue
+            
+            current_data = next_data
+
     async def execute_job(self, job: StupidJob):
         """
         Execute a StupidJob recursively.
@@ -170,7 +223,7 @@ class StupidRunner:
                     # WHY: ☢️ Expert Meltdown.
                     # We catch all expert-level errors here to prevent a single 
                     # malfunctioning model from killing the whole bot.
-                    logger.error(f"☢️ [StupidRunner] Expert Meltdown in '{step_id}': {e}")
+                    logger.error(f"☢️ [StupidRunner] Expert Meltdown in '{step_id}': {e}", exc_info=True)
                     # In a linear pipeline, we stop this branch, but the core lives.
                     continue
             
