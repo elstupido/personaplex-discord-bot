@@ -37,8 +37,9 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
     python3 -c "import sys; f=open('vllm_omni/entrypoints/stage_utils.py', 'r'); content=f.read(); f.close(); new_content=content.replace('device_list = _map_device_list(stage_id, device_list, visible_device_list)', 'device_list = visible_device_list # FORCED MAPPING'); f=open('vllm_omni/entrypoints/stage_utils.py', 'w'); f.write(new_content); f.close()" && \
     pip install --no-deps -e .
 
-# 4. Install Audio Codecs (The "Golden Age" versions)
-RUN pip install --no-cache-dir --no-deps \
+# 4. Install Audio Codecs and Engine Dependencies
+RUN pip install --no-cache-dir \
+    aenum \
     descript-audio-codec \
     librosa \
     soundfile \
