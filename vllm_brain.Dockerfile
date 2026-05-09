@@ -34,6 +34,7 @@ RUN pip install --no-cache-dir --no-deps \
     aenum \
     lazy_loader \
     num2words \
+    soxr \
     descript-audio-codec \
     librosa \
     soundfile \
