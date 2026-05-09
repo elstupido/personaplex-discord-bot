@@ -40,7 +40,7 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
 
 # 4. Install Audio Codecs (The "Golden Age" versions)
 RUN pip install --no-cache-dir \
-    descript-audio-codec==0.0.7 \
+    descript-audio-codec \
     librosa \
     soundfile \
     "fish-speech @ git+https://github.com/fishaudio/fish-speech.git"
