@@ -53,7 +53,15 @@ RUN pip install --no-cache-dir --no-deps \
     "fish-speech @ git+https://github.com/fishaudio/fish-speech.git" \
     funasr \
     modelscope \
-    omegaconf torch_complex websockets scipy tensorboard pydantic pydub librosa kaldiio soundfile editdistance pyyaml aliyun-python-sdk-core aliyun-python-sdk-kms hydra-core
+    torch_complex \
+    websockets \
+    scipy \
+    tensorboard \
+    pydantic \
+    kaldiio \
+    editdistance \
+    aliyun-python-sdk-core \
+    aliyun-python-sdk-kms
 
 # 3. THE FINAL SURGERY: Force Blackwell Wheels
 RUN pip install --no-cache-dir --force-reinstall --no-deps /tmp/transformer_engine-*.whl /tmp/torchaudio-*.whl && \
