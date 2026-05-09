@@ -21,7 +21,10 @@ RUN apt-get update && apt-get install -y \
     git build-essential portaudio19-dev ffmpeg curl \
     && rm -rf /var/lib/apt/lists/*
 
-# 2. Install Blackwell Wheels
+# 2. Install vLLM Core (Mandatory for Omni fork)
+RUN pip install --no-cache-dir --no-deps vllm==0.6.3
+
+# 3. Install Blackwell Wheels
 # WHY: These are pre-compiled for sm_120 (RTX 5090).
 COPY dist/*.whl /tmp/
 RUN --mount=type=cache,target=/root/.cache/pip \
