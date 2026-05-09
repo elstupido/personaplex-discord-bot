@@ -18,11 +18,7 @@ RUN apt-get update && apt-get install -y \
     && ln -sf /usr/bin/python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/*
 
-# 2. Install Blackwell Wheels
-# WHY: These are pre-compiled for sm_120 (RTX 5090).
-COPY dist/*.whl /tmp/
-RUN pip install --no-cache-dir --force-reinstall --no-deps /tmp/transformer_engine-*.whl /tmp/torchaudio-*.whl && \
-    rm -rf /tmp/*.whl
+# 2. [DEFERRED] Blackwell Wheels will be installed last to ensure they aren't overridden.
 
 # 3. Install vLLM-Omni
 # WHY: We install vLLM-Omni on top of the validated Blackwell foundation.
@@ -32,12 +28,18 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
     pip install --no-deps -e .
 
 # 4. Install Audio Codecs and Engine Dependencies
-RUN pip install --no-cache-dir --no-deps \
-    aenum \
+# WHY: We allow dependencies here so lazy_loader, aenum, etc. are pulled in.
+RUN pip install --no-cache-dir \
     descript-audio-codec \
     librosa \
     soundfile \
     "fish-speech @ git+https://github.com/fishaudio/fish-speech.git"
+
+# 5. THE FINAL SURGERY: Force Blackwell Wheels
+# WHY: We overwrite whatever generic torch/torchaudio the previous steps pulled in.
+COPY dist/*.whl /tmp/
+RUN pip install --no-cache-dir --force-reinstall --no-deps /tmp/transformer_engine-*.whl /tmp/torchaudio-*.whl && \
+    rm -rf /tmp/*.whl
 
 # 5. Final Blueprint Mapping
 COPY qwen2_5_omni_5090.yaml /app/stage_config.yaml
