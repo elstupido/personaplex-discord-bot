@@ -17,16 +17,43 @@ WORKDIR /app
 # 1. [DEFERRED] Blackwell Wheels
 COPY dist/*.whl /tmp/
 
-# 2. Install Audio Processing Stack
-# WHY: Allow dependencies to be satisfied normally.
-RUN pip install --no-cache-dir \
-    librosa \
-    soundfile \
+# 2. Install Unified Dependency Stack
+# WHY: Total parity with vllm-brain. We manually satisfy the tree to avoid ABI rape.
+RUN pip install --no-cache-dir --no-deps \
+    av>=14.0.0 \
+    omegaconf>=2.3.0 \
+    diffusers>=0.36.0 \
+    accelerate==1.12.0 \
+    soundfile>=0.13.1 \
+    cache-dit==1.3.0 \
+    tqdm>=4.66.0 \
+    torchsde>=0.2.6 \
+    openai-whisper>=20250625 \
+    imageio[ffmpeg]>=2.37.2 \
+    x-transformers>=2.12.2 \
+    einops>=0.8.1 \
+    prettytable>=3.8.0 \
+    aenum==3.1.16 \
+    pyzmq>=25.0.0 \
+    janus>=1.0.0 \
+    pydub \
+    onnxruntime-gpu>=1.23.2 \
+    fa3-fwd==0.0.3 \
+    "gradio>5.0.0" \
+    "transformers<=4.57.3" \
+    "lightning>=2.1.0" \
+    "hydra-core>=1.3.2" \
+    "librosa>=0.10.1" \
+    "descript-audio-codec" \
+    "pyaudio" \
+    "natsort" \
+    "soxr" \
+    "lazy_loader" \
+    "num2words" \
     "fish-speech @ git+https://github.com/fishaudio/fish-speech.git" \
     funasr \
-    modelscope
-
-RUN pip install --no-cache-dir omegaconf torch_complex websockets scipy tensorboard pydantic pydub librosa kaldiio soundfile editdistance pyyaml aliyun-python-sdk-core aliyun-python-sdk-kms hydra-core
+    modelscope \
+    omegaconf torch_complex websockets scipy tensorboard pydantic pydub librosa kaldiio soundfile editdistance pyyaml aliyun-python-sdk-core aliyun-python-sdk-kms hydra-core
 
 # 3. THE FINAL SURGERY: Force Blackwell Wheels
 RUN pip install --no-cache-dir --force-reinstall --no-deps /tmp/transformer_engine-*.whl /tmp/torchaudio-*.whl && \
