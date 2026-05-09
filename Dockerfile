@@ -64,6 +64,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     sed -i 's/grpcio==1.57.0/grpcio>=1.62.0/g' /app/glm/requirements.txt && \
     sed -i 's/grpcio-tools==1.57.0/grpcio-tools>=1.62.0/g' /app/glm/requirements.txt && \
     sed -i '/torch/d; /torchaudio/d; /pynini/d; /WeTextProcessing/d; /flash-attn/d; /xformers/d; /triton/d' /app/glm/requirements.txt && \
+    sed -i 's/ --hash=sha256:.*//g' /app/glm/requirements.txt && \
+    sed -i 's/ --hash=sha256:.*//g' /app/omni/requirements.txt && \
     pip install -q --no-cache-dir --no-build-isolation -r /app/glm/requirements.txt && \
     sed -i '/torch/d; /torchaudio/d; /flash-attn/d; /xformers/d; /triton/d' /app/omni/requirements.txt && \
     pip install -q --no-cache-dir --no-build-isolation -r /app/omni/requirements.txt
@@ -74,9 +76,9 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     pip install "Cython<3.0.0" "numpy<2.0.0" && \
     if [ -f /app/moshi/requirements.txt ]; then sed -i '/torch/d; /torchaudio/d; /pynini/d' /app/moshi/requirements.txt; fi && \
     pip install -q --no-cache-dir --no-deps /app/moshi/. && \
-    pip install -q --no-cache-dir --prefer-binary --no-build-isolation \
+    pip install -U --no-cache-dir --prefer-binary --no-build-isolation \
     python-dotenv PyNaCl accelerate "bitsandbytes>=0.45.0" aiohttp \
-    matcha-tts setuptools faster-whisper funasr modelscope
+    matcha-tts setuptools faster-whisper funasr modelscope sherpa-onnx sentencepiece silero-vad
 RUN pip install --no-cache-dir --force-reinstall \
     "py-cord[voice] @ git+https://github.com/Pycord-Development/pycord.git@refs/pull/3159/head"
 

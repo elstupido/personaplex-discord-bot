@@ -1,0 +1,31 @@
+# WHY THIS FILE EXISTS:
+# Pure stage-partitioning config for Qwen2.5-Omni on a single RTX 5090.
+# We stripped the 'engine_args' bloat; the engine gets those from the CLI.
+# This file only manages the physical partitioning of the internal stages.
+
+async_chunk: false
+
+stages:
+  - stage_id: 0
+    # Reasoning Core
+    max_num_seqs: 1
+    gpu_memory_utilization: 0.55
+    enforce_eager: true
+    mm_processor_cache_gb: 2
+    devices: "0"
+
+  - stage_id: 1
+    # Acoustic Generator
+    max_num_seqs: 1
+    gpu_memory_utilization: 0.20
+    enforce_eager: true
+    devices: "0"
+
+  - stage_id: 2
+    # Waveform Renderer
+    max_num_seqs: 1
+    gpu_memory_utilization: 0.10
+    enforce_eager: true
+    enable_flashinfer_autotune: false
+    async_scheduling: false
+    devices: "0"
