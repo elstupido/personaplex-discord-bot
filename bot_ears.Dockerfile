@@ -8,7 +8,9 @@ ENV PYTHONUNBUFFERED=1
 # BLACKWELL COMPATIBILITY BRIDGE
 ENV TORCH_CUDA_ARCH_LIST="9.0"
 
-RUN apt-get update && apt-get install -y ffmpeg libsndfile1 portaudio19-dev && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y ffmpeg libsndfile1 portaudio19-dev \
+    && ln -sf /usr/bin/python3 /usr/bin/python \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 

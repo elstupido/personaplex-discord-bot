@@ -15,6 +15,7 @@ WORKDIR /app
 # 1. System dependencies
 RUN apt-get update && apt-get install -y \
     git build-essential portaudio19-dev ffmpeg curl \
+    && ln -sf /usr/bin/python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/*
 
 # 2. Install Blackwell Wheels
@@ -23,7 +24,7 @@ COPY dist/*.whl /tmp/
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install --no-cache-dir /tmp/transformer_engine-*.whl && \
     pip install --no-cache-dir /tmp/torchaudio-*.whl && \
-    python -c "import torchaudio; import transformer_engine; print('SUCCESS: Blackwell Wheels Verified')" && \
+    python3 -c "import torchaudio; import transformer_engine; print('SUCCESS: Blackwell Wheels Verified')" && \
     rm -rf /tmp/*.whl
 
 # 3. Install vLLM-Omni
