@@ -30,6 +30,8 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
 # 4. Install Audio Codecs and Engine Dependencies
 # WHY: We allow dependencies here so lazy_loader, aenum, etc. are pulled in.
 RUN pip install --no-cache-dir \
+    aenum \
+    lazy_loader \
     descript-audio-codec \
     librosa \
     soundfile \
