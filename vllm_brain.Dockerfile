@@ -31,8 +31,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     rm -rf /tmp/*.whl
 
 # 3. Install vLLM-Omni
-# WHY: We install vLLM on top of the validated Blackwell foundation.
-RUN pip install --no-cache-dir vllm==0.6.3
+# WHY: We install vLLM-Omni on top of the validated Blackwell foundation.
 RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
     cd /app/vllm-omni && \
     python3 -c "import sys; f=open('vllm_omni/entrypoints/stage_utils.py', 'r'); content=f.read(); f.close(); new_content=content.replace('device_list = _map_device_list(stage_id, device_list, visible_device_list)', 'device_list = visible_device_list # FORCED MAPPING'); f=open('vllm_omni/entrypoints/stage_utils.py', 'w'); f.write(new_content); f.close()" && \
