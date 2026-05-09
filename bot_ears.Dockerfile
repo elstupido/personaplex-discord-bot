@@ -50,6 +50,7 @@ RUN pip install --no-cache-dir --no-deps \
     "soxr" \
     "lazy_loader" \
     "num2words" \
+    "huggingface-hub==0.25.2" \
     "fish-speech @ git+https://github.com/fishaudio/fish-speech.git" \
     funasr \
     modelscope \

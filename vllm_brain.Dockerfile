@@ -30,6 +30,7 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
 # 4. Install Unified Dependency Stack
 # WHY: We manually satisfy the full dependency tree for vLLM-Omni and Fish Speech
 # to avoid 'ABI Rape' (generic torch upgrades) while ensuring no 'ModuleNotFoundError's.
+
 RUN pip install --no-cache-dir --no-deps \
     av>=14.0.0 \
     omegaconf>=2.3.0 \
@@ -61,6 +62,7 @@ RUN pip install --no-cache-dir --no-deps \
     "soxr" \
     "lazy_loader" \
     "num2words" \
+    "huggingface-hub==0.25.2" \
     "fish-speech @ git+https://github.com/fishaudio/fish-speech.git"
 
 # 5. THE FINAL SURGERY: Force Blackwell Wheels
