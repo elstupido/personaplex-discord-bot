@@ -1,8 +1,5 @@
-# MANDATORY: NVIDIA 25.01 for RTX 5090 (sm_120) support
-ARG BASE_IMAGE="nvcr.io/nvidia/pytorch"
-ARG BASE_IMAGE_TAG="25.01-py3" 
-
-FROM ${BASE_IMAGE}:${BASE_IMAGE_TAG}
+# MANDATORY: Original vLLM base for ABI parity
+FROM vllm/vllm-openai:v0.20.0
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC

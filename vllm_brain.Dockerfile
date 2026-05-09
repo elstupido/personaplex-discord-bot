@@ -1,9 +1,5 @@
-# MANDATORY: NVIDIA 25.01 for RTX 5090 (sm_120) support
-# This image is ~15GB, ensure WSL2 has enough disk space.
-ARG BASE_IMAGE="nvcr.io/nvidia/pytorch"
-ARG BASE_IMAGE_TAG="25.01-py3" 
-
-FROM ${BASE_IMAGE}:${BASE_IMAGE_TAG}
+# MANDATORY: Original vLLM base that contains the engine core
+FROM vllm/vllm-openai:v0.20.0
 
 # BLACKWELL COMPATIBILITY BRIDGE
 ENV TORCH_CUDA_ARCH_LIST="9.0"
@@ -21,10 +17,7 @@ RUN apt-get update && apt-get install -y \
     git build-essential portaudio19-dev ffmpeg curl \
     && rm -rf /var/lib/apt/lists/*
 
-# 2. Install vLLM Core (Mandatory for Omni fork)
-RUN pip install --no-cache-dir --no-deps vllm==0.6.3
-
-# 3. Install Blackwell Wheels
+# 2. Install Blackwell Wheels
 # WHY: These are pre-compiled for sm_120 (RTX 5090).
 COPY dist/*.whl /tmp/
 RUN --mount=type=cache,target=/root/.cache/pip \
@@ -42,7 +35,6 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
 
 # 4. Install Audio Codecs and Engine Dependencies
 RUN pip install --no-cache-dir \
-    aenum \
     descript-audio-codec \
     librosa \
     soundfile \
