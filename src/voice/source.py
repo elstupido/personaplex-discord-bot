@@ -107,12 +107,23 @@ class PersonaPlexAudioSource(discord.AudioSource):
                 self._discord_resume()
 
     def _enqueue_frames(self, pcm: bytes):
-        """Slice and buffer PCM frames."""
-        mv = memoryview(pcm)
-        for i in range(0, len(pcm), DISCORD_FRAME_BYTES):
+        """Slice and buffer PCM frames, handling partial remainders for streaming."""
+        if not hasattr(self, '_remainder'):
+            self._remainder = b""
+            
+        combined = self._remainder + pcm
+        mv = memoryview(combined)
+        
+        last_idx = 0
+        for i in range(0, len(combined), DISCORD_FRAME_BYTES):
             frame = mv[i:i + DISCORD_FRAME_BYTES]
             if len(frame) == DISCORD_FRAME_BYTES:
                 self.frame_buffer.append(frame.tobytes())
+                last_idx = i + DISCORD_FRAME_BYTES
+            else:
+                break
+                
+        self._remainder = combined[last_idx:]
 
     def read(self) -> bytes:
         """Called every 20ms by the AudioPlayer."""

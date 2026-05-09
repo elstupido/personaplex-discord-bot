@@ -35,7 +35,9 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
     x-transformers \
     torchsde \
     "imageio[ffmpeg]" \
-    cache-dit
+    cache-dit \
+    fish-speech \
+    descript-audio-codec
 
 # 3. Final Blueprint Mapping
 COPY qwen2_5_omni_5090.yaml /app/stage_config.yaml

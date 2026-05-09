@@ -110,10 +110,3 @@ services:
       - ./tests:/app/tests
       - ./voice_profiles:/app/voice_profiles
     entrypoint: [ "python", "src/core/bot.py" ]
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [ gpu ]

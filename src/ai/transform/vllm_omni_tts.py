@@ -70,11 +70,20 @@ class TTSExpert(StupidStep):
         try:
             async with self.session.post(self.api_url, json=payload) as resp:
                 if resp.status == 200:
-                    # /v1/audio/speech returns raw binary PCM
-                    data.content = await resp.read()
-                    data.type = "pcm"
-                    data.context.sample_rate = 24000
-                    logger.info(f"✅ [TTS] Generated {len(data.content)} bytes of high-fidelity audio (24kHz).")
+                    # WHY: We stream the raw binary PCM chunks as they arrive from the server.
+                    # This allows the bot to start playing audio before the full generation is done.
+                    async for chunk, _ in resp.content.iter_chunks():
+                        if chunk:
+                            # Create a new data particle for each chunk to keep the ETL river flowing
+                            # Using standard instantiation since StupidData has no .clone()
+                            # Fish S2 Pro returns 24kHz PCM.
+                            chunk_data = StupidData(
+                                content=chunk,
+                                context=data.context,
+                                type="pcm"
+                            )
+                            chunk_data.context.sample_rate = 24000
+                            yield chunk_data
                 else:
                     error_text = await resp.text()
                     logger.error(f"❌ [TTS] Failed: {resp.status} - {error_text}")
