@@ -35,6 +35,9 @@ RUN pip install --no-cache-dir --no-deps \
     lazy_loader \
     num2words \
     soxr \
+    omegaconf \
+    hydra-core \
+    pyyaml \
     descript-audio-codec \
     librosa \
     soundfile \
