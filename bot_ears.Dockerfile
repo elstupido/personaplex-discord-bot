@@ -15,15 +15,19 @@ RUN apt-get update && apt-get install -y ffmpeg libsndfile1 portaudio19-dev \
 WORKDIR /app
 
 # 1. Install Blackwell Wheels
-# WHY: We must maintain ABI parity with vllm-brain.
 COPY dist/*.whl /tmp/
 RUN pip install --no-cache-dir /tmp/transformer_engine-*.whl && \
     pip install --no-cache-dir /tmp/torchaudio-*.whl && \
     rm -rf /tmp/*.whl
 
 # 2. Install Audio Processing Stack
-RUN pip install --no-cache-dir --no-deps funasr modelscope
-RUN pip install --no-cache-dir omegaconf torch_complex websockets scipy tensorboard pydantic pydub librosa kaldiio soundfile editdistance pyyaml aliyun-python-sdk-core aliyun-python-sdk-kms hydra-core
+RUN pip install --no-cache-dir --no-deps \
+    librosa \
+    soundfile \
+    "fish-speech @ git+https://github.com/fishaudio/fish-speech.git" \
+    funasr \
+    modelscope
+RUN pip install --no-cache-dir --no-deps omegaconf torch_complex websockets scipy tensorboard pydantic pydub librosa kaldiio soundfile editdistance pyyaml aliyun-python-sdk-core aliyun-python-sdk-kms hydra-core
 
 COPY ears_entrypoint.sh /app/ears_entrypoint.sh
 RUN chmod +x /app/ears_entrypoint.sh

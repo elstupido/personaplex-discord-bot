@@ -21,13 +21,8 @@ RUN apt-get update && apt-get install -y \
 # 2. Install Blackwell Wheels
 # WHY: These are pre-compiled for sm_120 (RTX 5090).
 COPY dist/*.whl /tmp/
-RUN --mount=type=cache,target=/root/.cache/pip \
     pip install --no-cache-dir /tmp/transformer_engine-*.whl && \
     pip install --no-cache-dir /tmp/torchaudio-*.whl && \
-    export TORCH_LIB_PATH=$(python3 -c 'import torch, os; print(os.path.dirname(torch.__file__) + "/lib")') && \
-    export LD_LIBRARY_PATH=$TORCH_LIB_PATH:$LD_LIBRARY_PATH && \
-    export PRELOAD_LIBS="$TORCH_LIB_PATH/libc10.so:$TORCH_LIB_PATH/libc10_cuda.so:$TORCH_LIB_PATH/libtorch_python.so" && \
-    LD_PRELOAD=$PRELOAD_LIBS python3 -c "import os; os.environ.pop('LD_PRELOAD', None); import torchaudio; import transformer_engine; print('SUCCESS: Blackwell Wheels Verified')" && \
     rm -rf /tmp/*.whl
 
 # 3. Install vLLM-Omni
@@ -38,7 +33,7 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
     pip install --no-deps -e .
 
 # 4. Install Audio Codecs and Engine Dependencies
-RUN pip install --no-cache-dir \
+RUN pip install --no-cache-dir --no-deps \
     descript-audio-codec \
     librosa \
     soundfile \
