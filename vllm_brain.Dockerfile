@@ -28,10 +28,12 @@ RUN git clone https://github.com/vllm-project/vllm-omni.git /app/vllm-omni && \
     pip install --no-deps -e .
 
 # 4. Install Audio Codecs and Engine Dependencies
-# WHY: We allow dependencies here so lazy_loader, aenum, etc. are pulled in.
-RUN pip install --no-cache-dir \
+# WHY: We use --no-deps to prevent 'ABI Rape' (generic torch upgrades).
+# We manually satisfy the dependency tree for the audio stack.
+RUN pip install --no-cache-dir --no-deps \
     aenum \
     lazy_loader \
+    num2words \
     descript-audio-codec \
     librosa \
     soundfile \
