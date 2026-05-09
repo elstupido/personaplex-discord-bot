@@ -8,6 +8,7 @@ echo "🔍 [Diagnostics] Checking environment state..."
 python3 -c "import torch; print(f'🔥 Torch Version: {torch.__version__}')"
 python3 -m pip show vllm | grep -E "Version|Location" || echo "vLLM not found in pip"
 python3 -c "import vllm; print(f'📦 vLLM File: {vllm.__file__}')"
+nvidia-smi || echo "⚠️ nvidia-smi failed!"
 
 # --- VRAM Stewardship ---
 TARGETS=(

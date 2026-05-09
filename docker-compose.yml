@@ -13,8 +13,8 @@ services:
     environment:
       - CUDA_VISIBLE_DEVICES=0
       - HF_HOME=/app/model_cache
-      - VLLM_LOGGING_LEVEL=DEBUG
-      - VLLM_ATTENTION_BACKEND=XFORMERS
+      - VLLM_LOGGING_LEVEL=INFO
+      - VLLM_ATTENTION_BACKEND=FLASH_ATTN
       - NCCL_P2P_DISABLE=1
       - NCCL_IB_DISABLE=1
       - PYTHONUNBUFFERED=1
@@ -25,12 +25,13 @@ services:
     volumes:
       - ./model_cache:/app/model_cache
       - ./brain_entrypoint.sh:/app/brain_entrypoint.sh
+      - ./qwen2_5_omni_5090.yaml:/app/qwen2_5_omni_5090.yaml
     depends_on:
       bot-ears:
         condition: service_healthy
     entrypoint: /app/brain_entrypoint.sh
     command: >
-      --port 8000  --host 0.0.0.0  --model fishaudio/s2-pro --trust-remote-code  --gpu-memory-utilization 0.75  --max-model-len 2048 --enforce-eager --omni
+      --port 8000  --host 0.0.0.0  --model fishaudio/s2-pro --trust-remote-code --config /app/qwen2_5_omni_5090.yaml --omni
     healthcheck:
       test: [ "CMD-SHELL", "curl -f http://localhost:8000/health || exit 1" ]
       interval: 10s

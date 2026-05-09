@@ -7,25 +7,22 @@ async_chunk: false
 
 stages:
   - stage_id: 0
-    # Reasoning Core
+    # Fish Logic Core (Reasoning)
     max_num_seqs: 1
-    gpu_memory_utilization: 0.55
+    gpu_memory_utilization: 0.40
     enforce_eager: true
-    mm_processor_cache_gb: 2
     devices: "0"
 
   - stage_id: 1
-    # Acoustic Generator
+    # Fish Acoustic Generator (S2P)
     max_num_seqs: 1
-    gpu_memory_utilization: 0.20
+    gpu_memory_utilization: 0.40
     enforce_eager: true
     devices: "0"
 
   - stage_id: 2
-    # Waveform Renderer
+    # Fish Waveform Renderer (Vocoder)
     max_num_seqs: 1
-    gpu_memory_utilization: 0.10
+    gpu_memory_utilization: 0.15
     enforce_eager: true
-    enable_flashinfer_autotune: false
-    async_scheduling: false
     devices: "0"
