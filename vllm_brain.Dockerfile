@@ -24,7 +24,9 @@ COPY dist/*.whl /tmp/
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install --no-cache-dir /tmp/transformer_engine-*.whl && \
     pip install --no-cache-dir /tmp/torchaudio-*.whl && \
-    python3 -c "import torchaudio; import transformer_engine; print('SUCCESS: Blackwell Wheels Verified')" && \
+    TORCH_LIB_PATH=$(python3 -c 'import torch, os; print(os.path.dirname(torch.__file__) + "/lib")') && \
+    PRELOAD_LIBS="$TORCH_LIB_PATH/libc10.so:$TORCH_LIB_PATH/libc10_cuda.so:$TORCH_LIB_PATH/libtorch_python.so" && \
+    LD_PRELOAD=$PRELOAD_LIBS python3 -c "import os; os.environ.pop('LD_PRELOAD', None); import torchaudio; import transformer_engine; print('SUCCESS: Blackwell Wheels Verified')" && \
     rm -rf /tmp/*.whl
 
 # 3. Install vLLM-Omni
