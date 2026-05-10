@@ -132,16 +132,21 @@ class VoiceServiceCog(commands.Cog):
         await ctx.followup.send("🖕 Session ended.")
 
     @slash_command(name="say", description="Make the bot speak text.", guild_ids=[int(os.getenv("GUILD_ID", 0))] if os.getenv("GUILD_ID") else None)
-    async def say(self, ctx: discord.ApplicationContext, text: Option(str, "What should I say?")):
+    async def say(self, ctx: discord.ApplicationContext, 
+                  text: Option(str, "What should I say?"),
+                  voice: Option(str, "Voice profile to use (optional)", default=None)):
         """Manual TTS Trigger."""
         if not self.active_session:
             return await ctx.respond("❌ I'm not in a voice channel! Use `/join` first.", ephemeral=True)
         
         await ctx.defer()
         try:
-            logger.info(f"🗣️ [VoiceService] User {ctx.author} requested /say: {text}")
-            await self.bridge.speak(text)
-            await ctx.followup.send(f"🗣️ **Said**: {text}")
+            logger.info(f"🗣️ [VoiceService] User {ctx.author} requested /say: {text} (Voice: {voice})")
+            await self.bridge.speak(text, voice_name=voice)
+            if voice:
+                await ctx.followup.send(f"🗣️ **Said** (as {voice}): {text}")
+            else:
+                await ctx.followup.send(f"🗣️ **Said**: {text}")
         except Exception as e:
             logger.error(f"💥 [VoiceService] /say failed: {e}")
             await ctx.followup.send(f"⚠️ **Failed to speak**: {e}")

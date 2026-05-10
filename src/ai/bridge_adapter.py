@@ -174,7 +174,7 @@ class StupidBridgeAdapter:
         
         logger.info(f"🌊 [StupidBridge] Job complete for user {user_id}.")
 
-    async def speak(self, text: str):
+    async def speak(self, text: str, voice_name: str = None):
         """
         The 'Mouth-Only' Gateway. 👄
         
@@ -190,6 +190,8 @@ class StupidBridgeAdapter:
         # 1. Build the Text Particle ⚛️
         # WHY: We use a 'manual' user_id to distinguish this from AI-generated turn logic.
         ctx = AcousticContext(user_id="manual_tts")
+        # Inject the requested voice (if any), fallback to the globally active voice, or finally 'default'
+        ctx.metadata['active_voice'] = voice_name or getattr(self, 'active_voice', 'default')
         data = StupidData(content=text, context=ctx, type="text")
         
         # 2. Define the 'Mouth' Job 📜
