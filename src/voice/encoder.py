@@ -19,7 +19,7 @@ logger = logging.getLogger("voice.encoder")
 
 DISCORD_SR = 48000
 
-VOICES_DIR = "src/assets/voices"
+VOICES_DIR = "voice_profiles"
 
 
 def _encode_blocking(pcm_bytes: bytes, output_path: str) -> None:

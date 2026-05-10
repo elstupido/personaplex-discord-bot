@@ -9,20 +9,20 @@ stages:
   - stage_id: 0
     # Fish Logic Core (Reasoning)
     max_num_seqs: 1
-    gpu_memory_utilization: 0.40
-    enforce_eager: true
+    gpu_memory_utilization: 0.30
+    enforce_eager: false
     devices: "0"
 
   - stage_id: 1
     # Fish Acoustic Generator (S2P)
     max_num_seqs: 1
-    gpu_memory_utilization: 0.40
-    enforce_eager: true
+    gpu_memory_utilization: 0.30
+    enforce_eager: false
     devices: "0"
 
   - stage_id: 2
     # Fish Waveform Renderer (Vocoder)
     max_num_seqs: 1
-    gpu_memory_utilization: 0.15
-    enforce_eager: true
+    gpu_memory_utilization: 0.10
+    enforce_eager: false
     devices: "0"

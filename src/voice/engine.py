@@ -68,6 +68,7 @@ class AudioEngine(multiprocessing.Process):
         self.stop_event = stop_event
         self.streams: Dict[str, StreamState] = {}
         self.last_bot_heartbeat = time.time()
+        self.state = "PASSIVE" # PASSIVE or RECORDING
 
     def run(self):
         logger.info(f"[Engine] [RUN] Process started. PID={self.pid}")
@@ -91,6 +92,12 @@ class AudioEngine(multiprocessing.Process):
                             self.process_packet(p, now)
                     elif m.get('type') == 'flush':
                         self._flush_all_buffers()
+                    elif m.get('type') == 'start_recording':
+                        self.state = "RECORDING"
+                        logger.info("[Engine] [GATED] GATES OPEN. Now recording turn.")
+                        # Force all streams to active to ensure we don't miss the start
+                        for s in self.streams.values():
+                            s.active = True
                     else:
                         self.process_packet(m, now)
 
@@ -199,36 +206,23 @@ class AudioEngine(multiprocessing.Process):
         
         stream = self.streams[uid]
         
-        # 4. Re-activation Check
-        if not stream.active:
-            import numpy as np
-            pcm_float = np.frombuffer(pcm, dtype=np.int16).astype(np.float32) / 32768.0
-            rms = np.sqrt(np.mean(np.square(pcm_float)))
-            
-            # If the packet is pure synthetic silence from Pycord FEC flush, ignore it entirely
-            # Ignore background noise (VAD-lite)
-            if rms < 0.005:
-                return
-                
-            # We log exactly what packet caused this reactivation
-            logger.info(
-                f"[Engine] [STREAM_REACTIVATE] Audio detected! user={uid} | "
-                f"ssrc={ssrc} | pkts_in_q={self.input_queue.qsize()} | "
-                f"rms={rms:.4f}"
-            )
-            stream.active = True
-            stream.last_rx_arrival = arrival - 0.02
-            stream.first_packet_delta = now - arrival
-            # CRITICAL: Reset the RTP clock so we don't inject the inter-turn pause as jitter!
-            stream.last_ts = curr_ts - 960
-            stream.packets = []
-            stream.jitter_filled_pkts = 0
-            stream.inactivity_filled_pkts = 0
-            stream.total_real_pkts = 0
-            stream.first_packet_delta = now - arrival
-            stream.first_ts = curr_ts
-            stream.first_arrival = arrival
-            stream.current_drift = 0.0
+        stream.first_arrival = arrival
+        stream.current_drift = 0.0
+
+        # 4b. Gated Buffer Management
+        # WHY: If we are PASSIVE, we don't buffer anything. 
+        # We only send STREAM_CHUNK for wake-word detection.
+        if self.state == "PASSIVE":
+            self.output_queue.put({
+                'event_type': 'STREAM_CHUNK',
+                'user_id': orig_uid,
+                'audio': pcm
+            })
+            # Still update metadata to keep the pipe 'warm'
+            stream.last_ts = curr_ts
+            stream.last_rx_arrival = arrival
+            stream.last_rx_now = now
+            return
 
         # 5. SSRC Collision Check (Reset turn if SSRC shifts unexpectedly)
         if ssrc != stream.ssrc and ssrc != 0 and stream.ssrc != 0:
@@ -309,6 +303,9 @@ class AudioEngine(multiprocessing.Process):
         })
 
     def tick(self, now: float):
+        if self.state == "PASSIVE":
+            return # Don't waste cycles on VAD while idle
+
         for uid, stream in list(self.streams.items()):
             if not stream.active:
                 continue
@@ -344,6 +341,10 @@ class AudioEngine(multiprocessing.Process):
                 stream.active = False
                 stream.packets = []
                 stream.max_latency = 0.0
+                
+                # Revert to Passive mode after turn is sent
+                self.state = "PASSIVE"
+                logger.info("[Engine] [GATED] Turn complete. Reverting to PASSIVE.")
 
     def _finalize_turn(self, uid: str, now: float):
         import torch

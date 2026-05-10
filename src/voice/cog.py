@@ -151,19 +151,40 @@ class VoiceServiceCog(commands.Cog):
     voice = discord.SlashCommandGroup("voice", "Manage RPG character voices.")
 
     @voice.command(name="clone", description="Clone a voice profile.")
-    async def voice_clone(self, ctx: discord.ApplicationContext, name: Option(str, "Character name", default=None)):
+    async def voice_clone(
+        self, 
+        ctx: discord.ApplicationContext, 
+        action: Option(str, "Action to perform", choices=["capture", "load", "create"], default="capture"),
+        name: Option(str, "Voice name (for load/create)", default=None)
+    ):
         if not self.active_session:
-            return await ctx.respond("Join voice first!", ephemeral=True)
+            return await ctx.respond("❌ Join voice first!", ephemeral=True)
             
         orch_ptr = self.active_session['orchestrator']
-        orch_ptr.is_cloning = True
         
-        if name:
+        if action == "load":
+            if not name:
+                return await ctx.respond("❌ Please specify a voice name to load.", ephemeral=True)
+            if await self.bridge.load_voice_profile(name):
+                await ctx.respond(f"✨ **Voice Loaded!** Now speaking as: **{name}**")
+            else:
+                await ctx.respond(f"❌ Voice profile '**{name}**' not found in `voice_profiles/`.", ephemeral=True)
+                
+        elif action == "create":
+            if not name:
+                return await ctx.respond("❌ Please specify a name for your new voice.", ephemeral=True)
             name = "".join([c for c in name if c.isalnum() or c in ('_', '-')]).lower()
             self.bridge.active_voice = name
-            await ctx.respond(f"🎙️ **Cloning Mode Active!** Profile: **{name}**")
-        else:
-            await ctx.respond("🎙️ **Cloning Mode Active!** Speak for 3-5 seconds.")
+            orch_ptr.is_cloning = True
+            orch_ptr.signal_start_recording()
+            await ctx.respond(f"🎙️ **Cloning Mode Active!** Profile: **{name}**\nSpeak clearly for 3-10 seconds.")
+            
+        else: # Default: capture (no args)
+            target_name = "".join([c for c in ctx.author.display_name if c.isalnum() or c in ('_', '-')]).lower()
+            self.bridge.active_voice = target_name
+            orch_ptr.is_cloning = True
+            orch_ptr.signal_start_recording()
+            await ctx.respond(f"🎙️ **Mirroring {ctx.author.display_name}!**\nSpeak clearly for 3-10 seconds to save your profile.")
 
     @voice.command(name="switch", description="Switch character.")
     async def voice_switch(self, ctx: discord.ApplicationContext, name: str):

@@ -71,8 +71,8 @@ class StupidConfig:
         ),
         "qwen-fish": StupidBlueprint(
             name="Sacred Fish Hybrid",
-            steps=["downsampler", "vllm-omni-asr", "cpu_reasoning", "vllm-omni-tts", "upsampler"],
-            description="ASR (SenseVoice GPU) -> Think (Qwen CPU) -> Talk (Fish 19GB GPU) -> Upsample (Discord)."
+            steps=["downsampler", "vllm-omni-asr", "vllm_reasoning", "vllm-omni-tts", "upsampler"],
+            description="ASR (SenseVoice GPU) -> Think (vLLM GPU) -> Talk (Fish 19GB GPU) -> Upsample (Discord)."
         ),
         "diagnostics": StupidBlueprint(
             name="Maintenance Mode",
@@ -94,7 +94,7 @@ class StupidConfig:
         "vllm-omni": "ai.transform.vllm_omni",
         "vllm-omni-asr": "ai.transform.vllm_omni_asr",
         "vllm-omni-tts": "ai.transform.vllm_omni_tts",
-        "cpu_reasoning": "ai.transform.cpu_reasoning"
+        "vllm_reasoning": "ai.transform.vllm_reasoning"
     }
 
     @classmethod

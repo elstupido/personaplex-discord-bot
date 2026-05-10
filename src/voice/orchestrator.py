@@ -56,6 +56,14 @@ class AudioOrchestrator:
         self.trigger_engine = TriggerEngine(wake_word, clone_word)
         self.trigger_engine.on_trigger = self._on_trigger
 
+    def signal_start_recording(self):
+        """Manually open the recording gates from the Bot side."""
+        logger.info("🔓 [Orchestrator] Manual RECORDING signal sent to Engine.")
+        try:
+            self.reconstruction_q.put_nowait({'type': 'start_recording'})
+        except Exception:
+            pass
+
     def _on_trigger(self, trigger_type: str, text: str):
         """Callback fired by TriggerEngine when a wake/clone word is detected."""
         logger.info(f"✨ [Orchestrator] TRIGGER FIRED: {trigger_type} (Matched: '{text}')")
@@ -65,6 +73,12 @@ class AudioOrchestrator:
         elif trigger_type == "clone":
             self.is_cloning = True
             feedback_msg = "🎙️ **Voice Cloning Mode Active!** Please speak for 3-5 seconds to provide a reference."
+            
+        # SIGNAL ENGINE: Open the gates! 🔓
+        try:
+            self.reconstruction_q.put_nowait({'type': 'start_recording'})
+        except Exception as e:
+            logger.error(f"❌ [Orchestrator] Failed to signal Engine: {e}")
             
         # Immediately flush the engine's buffer to drop the wake/clone word
         try:
@@ -187,23 +201,21 @@ class AudioOrchestrator:
                 user = self.vc.guild.get_member(user_id) if user_id else None
                 username = user.display_name if user else f"User {user_id}"
                 
-                # Only dispatch if we are explicitly awake or cloning
-                if self.is_awake or self.is_cloning:
-                    duration = payload.get('duration_s', 0)
+                # The engine only sends TURN events when we are explicitly recording.
+                # Just dispatch it.
+                duration = payload.get('duration_s', 0)
+                
+                if duration < 0.5:
+                    logger.info(f"[Orchestrator] Ignoring micro-turn ({duration:.2f}s).")
+                    continue
                     
-                    if duration < 0.5:
-                        logger.info(f"[Orchestrator] Ignoring micro-turn ({duration:.2f}s).")
-                        continue
-                        
-                    logger.info(f"[Orchestrator] [DISPATCH] Handing {duration:.2f}s turn to Bridge for {username}")
-                    payload['is_clone_reference'] = self.is_cloning
-                    
-                    self.is_awake = False
-                    self.is_cloning = False
-                    
-                    asyncio.run_coroutine_threadsafe(self.bridge.send_audio_packet(payload), self.loop)
-                else:
-                    logger.info(f"[Orchestrator] [IDLE] Dropping {payload.get('duration_s', 0):.2f}s turn from {username}")
+                logger.info(f"[Orchestrator] [DISPATCH] Handing {duration:.2f}s turn to Bridge for {username}")
+                payload['is_clone_reference'] = self.is_cloning
+                
+                self.is_awake = False
+                self.is_cloning = False
+                
+                asyncio.run_coroutine_threadsafe(self.bridge.send_audio_packet(payload), self.loop)
                 
             except Exception as e:
                 logger.error(f"[Orchestrator] Listener error: {e}")

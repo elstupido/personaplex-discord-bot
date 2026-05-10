@@ -34,6 +34,8 @@ class StupidBridgeAdapter:
         # Acoustic UI Assets
         self.ding_pcm = b""
         self.audio_source = None # Set by Cog
+        self.active_voice = "default"
+        self.voices_dir = "voice_profiles"
 
     async def connect(self):
         self.is_running = True
@@ -71,6 +73,55 @@ class StupidBridgeAdapter:
         self.is_running = False
         logger.info(f"🛑 [StupidBridge] '{self.model_type}' adapter closed.")
 
+    async def save_voice_profile(self, name: str, audio_pcm: bytes):
+        """Save a new voice profile to disk with a transcript."""
+        from voice.encoder import encode_voice_to_pt
+        from .transform.vllm_omni_asr import ASRExpert
+        
+        output_path = os.path.join(self.voices_dir, f"{name}.wav")
+        txt_path = os.path.join(self.voices_dir, f"{name}.txt")
+        
+        logger.info(f"💾 [StupidBridge] Transcribing reference for: {name}...")
+        
+        # 1. Transcribe the reference audio for better Fish-Speech alignment
+        # WHY: Fish S2 Pro needs to know EXACTLY what is said in the ref audio.
+        try:
+            # Simple downmix/resample for ASR expert (16kHz mono)
+            import numpy as np
+            arr = np.frombuffer(audio_pcm, dtype=np.int16).reshape(-1, 2)
+            mono_48k = arr.mean(axis=1).astype(np.int16)
+            
+            # Basic decimation 48k -> 16k (Every 3rd sample)
+            mono_16k = mono_48k[::3].tobytes()
+            
+            from .stupid_base import AcousticContext
+            asr = ASRExpert("clone-transcriber")
+            ctx = AcousticContext(user_id="cloning_reference")
+            data = StupidData(content=mono_16k, context=ctx, type="pcm")
+            async for result in asr.process(data):
+                transcript = result.content
+                if transcript:
+                    with open(txt_path, "w") as f:
+                        f.write(transcript)
+                    logger.info(f"📝 [StupidBridge] Reference transcript saved: \"{transcript}\"")
+                break
+        except Exception as e:
+            logger.error(f"⚠️ [StupidBridge] Transcription failed during clone: {e}")
+
+        # 2. Save the WAV
+        logger.info(f"💾 [StupidBridge] Saving voice profile: {name} -> {output_path}")
+        await encode_voice_to_pt(audio_pcm, output_path)
+        return True
+
+    async def load_voice_profile(self, name: str) -> bool:
+        """Switch the active voice profile."""
+        path = os.path.join(self.voices_dir, f"{name}.wav")
+        if os.path.exists(path):
+            self.active_voice = name
+            logger.info(f"✨ [StupidBridge] Active voice switched to: {name}")
+            return True
+        return False
+
     async def send_audio_packet(self, payload: dict):
         """
         The Bridge-to-Runner Gateway. ⚡
@@ -96,12 +147,21 @@ class StupidBridgeAdapter:
             steps=self.blueprint.steps,
             data=data
         )
+
+        # 4. Handle Voice Cloning 🎙️
+        if payload.get('is_clone_reference'):
+            await self.save_voice_profile(self.active_voice, audio)
+            return # Don't process as a normal turn
         
         logger.info(f"🚀 [StupidBridge] Dispatching {len(audio)} bytes for user {user_id} via '{self.blueprint.name}'")
         
-        # 4. Run the Job ⚡
+        # 5. Run the Job ⚡
         # WHY: We iterate through the stream of results (PCM particles) 
         # and feed them directly into the Discord source for playback.
+        
+        # Inject the active voice into the context so the TTS expert can find it
+        data.context.metadata['active_voice'] = self.active_voice
+        
         async for result in self.runner.execute_job_stream(job):
             if result.type == "pcm" and self.audio_source:
                 # Ensure it's bytes (experts might return numpy/tensors)

@@ -10,6 +10,7 @@ services:
     ipc: host
     shm_size: '4gb'
     network_mode: host
+    env_file: .env
     environment:
       - CUDA_VISIBLE_DEVICES=0
       - HF_HOME=/app/model_cache
@@ -46,6 +47,41 @@ services:
               count: 1
               capabilities: [ gpu ]
 
+  # 🧠 THE ACTUAL BRAIN: vLLM for Reasoning
+  # WHY: Dedicated container for the 'Thinker' using an AWQ quantized 1.5B model.
+  # VRAM is strictly capped to ~2.5GB (0.08 of 32GB) to protect the Fish-Speech pipeline.
+  vllm-actual-brain:
+    image: vllm/vllm-openai:latest
+    container_name: vllm-actual-brain
+    runtime: nvidia
+    ipc: host
+    shm_size: '4gb'
+    network_mode: host
+    restart: always
+    env_file: .env
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - HF_HOME=/app/model_cache
+      - HF_TOKEN=${HF_TOKEN}
+      - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}
+    volumes:
+      - ./model_cache:/app/model_cache
+    command: >
+      --model cognitivecomputations/Dolphin3.0-Qwen2.5-1.5B  --gpu-memory-utilization 0.15  --max-model-len 4096  --port 8001  --host 0.0.0.0
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -f http://localhost:8001/health || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+
   # 👂 THE EARS: Standalone SenseVoice ASR (FunASR)
   # WHY: Disaggregated GPU/CPU transcription service.
   bot-ears:
@@ -57,6 +93,7 @@ services:
     shm_size: '4gb'
     network_mode: host
     restart: always
+    env_file: .env
     environment:
       - HF_HOME=/app/model_cache
       - PYTHONUNBUFFERED=1
@@ -86,8 +123,11 @@ services:
     container_name: bot
     network_mode: host
     restart: always
+    env_file: .env
     depends_on:
       vllm-brain:
+        condition: service_healthy
+      vllm-actual-brain:
         condition: service_healthy
     environment:
       - DISCORD_TOKEN=${DISCORD_TOKEN}
@@ -100,7 +140,9 @@ services:
       - WAKE_WORD=${WAKE_WORD}
       - VLLM_URL=http://localhost:8000/v1/chat/completions
       - VLLM_SPEECH_URL=http://localhost:8000/v1/audio/speech
+      - VLLM_REASONING_URL=http://localhost:8001/v1/chat/completions
       - STUPID_BLUEPRINT=qwen-fish
+      - BOT_EARS_URL=ws://localhost:8765/?format=wav&rate=16000
       - PYTHONPATH=/app/src
       - STUPID_DIAGNOSTICS=1
     volumes:
