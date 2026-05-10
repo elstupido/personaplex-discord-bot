@@ -94,7 +94,7 @@ class TTSExpert(StupidStep):
             "response_format": "pcm",
             "ref_audio": self.ref_audio_b64,
             "ref_text": self.ref_text,
-            "latency": "normal"
+            "latency": "low"
         }
 
         try:
@@ -122,7 +122,7 @@ class TTSExpert(StupidStep):
                                     context=data.context,
                                     type="pcm"
                                 )
-                                chunk_data.context.sample_rate = 24000
+                                chunk_data.context.sample_rate = 44100
                                 yield chunk_data
                 else:
                     error_text = await resp.text()
